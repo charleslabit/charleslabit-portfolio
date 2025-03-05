@@ -17,7 +17,6 @@ import {
   Text,
   Tooltip,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
 import {
   IconBrandFacebookFilled,
   IconBrandGithubFilled,
@@ -27,15 +26,11 @@ import {
   IconSun,
 } from "@tabler/icons-react";
 import { useAtom } from "jotai";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const path = usePathname();
-  const pathArr = usePathname()?.split("/");
-  const router = useRouter();
-  const [opened, { toggle }] = useDisclosure(true);
   const [isDarkMode, setIsDarkMode] = useAtom(isDarkModeAtom);
-  const hasNavbar = path !== "/" && path !== "/privacy_policy";
 
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
