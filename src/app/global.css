@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 200px;
+  scroll-padding-top: 230px;
 }
 
 .shortcut-button {
@@ -8,8 +8,6 @@ html {
 
   &:hover {
     transform: scale(1.1);
-    background-color: #0077cc;
-    color: #ffffff;
   }
 }
 
@@ -20,13 +18,13 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #0077cc; /* Thumb color */
+  background-color: #605e6b; /* Thumb color */
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #005fa3; /* Hover state */
+  background-color: #605e6b; /* Hover state */
 }
 
 ::-webkit-scrollbar-track {
