@@ -1,10 +1,10 @@
 import { Card } from "@/component";
-import { Center, Grid, Image, Text } from "@mantine/core";
+import { Center, Grid, Image, Stack, Text } from "@mantine/core";
 
 export const AboutPage = () => {
   return (
     <Center>
-      <Card id="about">
+      <Card id="about" title={"About Me"}>
         <Grid
           columns={5}
           gutter={16}
@@ -15,21 +15,28 @@ export const AboutPage = () => {
           }}
         >
           <Grid.Col span={{ lg: 3, sm: 5, base: 5, xl: 3, md: 5 }}>
-            <Text fz={25}>Hello, I'm</Text>
-            <Text fw="bold" fz={30}>
-              Charles Kenneth Labit
-            </Text>
-            <Text fz={25}>
-              a Software Developer with 7 years of experience. I specialize in
-              front-end development, with nearly four years of expertise in
-              React.js, Next.js, TypeScript, Mantine UI, and GraphQL. Currently,
-              I work as a Front-End Developer at Awesomelab, focusing on
-              building responsive and user-friendly web applications. My
-              previous experience as a Full-Stack Developer with Vue.js,
-              Node.js, Express.js, and MySQL has given me a strong understanding
-              of backend systems and API integrations, allowing me to create
-              seamless, end-to-end solutions.
-            </Text>
+            <Stack>
+              <Text>
+                I’m a software developer with 7 years of experience, currently
+                specializing as a Front-End Developer at Awesomelab, where I’ve
+                been for the past 4 years. Before this, I spent 3 years as a
+                Full Stack Developer, giving me a solid foundation in both
+                front-end and back-end technologies. Although my primary focus
+                is front-end development, my broad experience allows me to
+                approach projects with a well-rounded perspective.
+              </Text>
+              <Text>
+                I hold a Bachelor of Science in Computer Engineering from AMA
+                Computer College, completed in July 2018, which provided the
+                technical foundation for my development career.
+              </Text>
+              <Text>
+                Outside of work, I enjoy playing competitive games like Dota 2.
+                These games have not only honed my problem-solving and critical
+                thinking skills but also helped me improve my typing
+                speed—boosting both my coding efficiency and focus.
+              </Text>
+            </Stack>
           </Grid.Col>
           <Grid.Col span={2} m="auto">
             <Image

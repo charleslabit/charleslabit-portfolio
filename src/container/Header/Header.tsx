@@ -1,6 +1,8 @@
 import { Button, Center, Group } from "@mantine/core";
 
 export const Header = () => {
+  const onClickHome = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <Center>
       <Group justify="end" w={1440}>
@@ -8,8 +10,8 @@ export const Header = () => {
           <Button
             className="shortcut-button"
             component="a"
-            href="#home"
             variant="light"
+            onClick={onClickHome}
           >
             Home
           </Button>

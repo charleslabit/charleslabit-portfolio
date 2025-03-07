@@ -5,13 +5,13 @@ import { Header } from "../Header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <AppShell padding="md" withBorder={false}>
+    <AppShell padding="md">
       <AppShell.Header p={"md"}>
         <Header />
       </AppShell.Header>
 
       <AppShell.Main>
-        <Stack gap={100} mt={100}>
+        <Stack gap={100} mb={100}>
           {children}
         </Stack>
       </AppShell.Main>

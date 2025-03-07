@@ -23,4 +23,4 @@ export const userAtom = atom<User>({
   email: "",
   contactNo: "",
 });
-export const isDarkModeAtom = atom<boolean>(false);
+export const isDarkModeAtom = atom<boolean>(true);
