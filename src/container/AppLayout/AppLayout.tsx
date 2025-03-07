@@ -1,10 +1,7 @@
 "use client";
 import { AppShell, Stack } from "@mantine/core";
-import { AboutPage } from "../About";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
-import { HomePage } from "../Home";
-import { SkillsPage } from "../Skills";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,9 +12,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <AppShell.Main>
         <Stack gap={100} mt={100}>
-          <HomePage />
-          <AboutPage />
-          <SkillsPage />
+          {children}
         </Stack>
       </AppShell.Main>
       <AppShell.Footer p="md">

@@ -1,3 +1,11 @@
+import { AboutPage, HomePage, SkillsPage } from "@/container";
+
 export default function Home() {
-  return <div>test only</div>;
+  return (
+    <>
+      <HomePage />
+      <AboutPage />
+      <SkillsPage />
+    </>
+  );
 }
