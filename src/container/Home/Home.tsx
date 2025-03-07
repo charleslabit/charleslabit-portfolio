@@ -9,8 +9,9 @@ export const HomePage = () => {
           Hello, I'm Charles,
         </Text>
         <Text fz={40}>
-          Front End Developer with a strong focus on building dynamic and
-          engaging web applications.
+          A Front End Developer specializing in building responsive and
+          user-friendly web applications. I focus on creating seamless and
+          interactive experiences using modern web technologies.
         </Text>
       </Card>
     </Center>
