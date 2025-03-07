@@ -25,7 +25,13 @@ export const SkillsPage = () => {
           <SimpleGrid cols={{ sm: 2, xs: 1, md: 3 }} w="50%" m="auto">
             {skillSet.map((skill) => (
               <Stack m="auto" key={skill?.name} align="center">
-                <Image src={skill?.img} h={"auto"} w={55} radius={"25%"} />
+                <Image
+                  src={skill?.img}
+                  h={"auto"}
+                  w={55}
+                  radius={"25%"}
+                  className="hover-effect"
+                />
                 <Text>{skill?.name}</Text>
               </Stack>
             ))}

@@ -15,34 +15,30 @@ export const WorkExperience = () => {
           <Text fw={"bold"}>Front-End Developer | Awesomelab Inc. </Text>
           <List>
             <List.Item>
-              Developed and maintained web applications for various sectors,
-              including hotel management, data collection, e-commerce CMS, and
-              HR systems, using Next.js, TypeScript, and Mantine UI.
-            </List.Item>
-            <List.Item>
-              Optimized UI performance, reducing redundant network calls by 30%
-              using TanStack Query.
+              Developed and maintained web apps for sectors like hotel
+              management, data collection, e-commerce, and HR, using Next.js,
+              TypeScript, and Mantine UI
             </List.Item>
 
             <List.Item>
-              Integrated GraphQL using Apollo Client and AWS Amplify for
-              efficient and scalable data fetching.
+              Improved UI performance by reducing network calls by 30% with
+              TanStack Query and integrated GraphQL using Apollo Client and AWS
+              Amplify
             </List.Item>
 
             <List.Item>
-              Transformed Figma designs into pixel-perfect, responsive, and
-              accessible user interfaces, ensuring cross-browser compatibility.
+              Converted Figma designs into responsive, accessible, and
+              cross-browser compatible user interfaces.
             </List.Item>
 
             <List.Item>
-              Implemented comprehensive end-to-end testing with Playwright,
-              improving software reliability and increasing test coverage.
+              Used Playwright for end-to-end testing, improving reliability and
+              test coverage.
             </List.Item>
 
             <List.Item>
-              Collaborated closely with back-end developers to integrate APIs,
-              optimize data flow, and enhance performance across the application
-              stack.
+              Worked with back-end developers to integrate APIs, optimize data
+              flow, and improve performance.
             </List.Item>
 
             <List.Item>
@@ -50,13 +46,12 @@ export const WorkExperience = () => {
               project progress using Bitbucket and Jira.
             </List.Item>
             <List.Item>
-              Migrated UI frameworks from Ant Design to Mantine UI, enhancing
-              application speed and flexibility.
+              Migrated from Ant Design to Mantine UI, improving speed and
+              flexibility.
             </List.Item>
             <List.Item>
-              Engaged in regular code review sessions with colleagues to
-              maintain coding standards, reduce errors, and foster a
-              collaborative development environment.
+              Participated in code reviews to maintain standards, reduce errors,
+              and encourage collaboration.
             </List.Item>
           </List>
           <Group mt={20}>
@@ -78,11 +73,13 @@ export const WorkExperience = () => {
           <Text fw={"bold"}>Junior Programmer | HRD Singapore Pte. Ltd. </Text>
           <List>
             <List.Item>
-              Developed and maintained a comprehensive in-house system for house
-              planners, encompassing both desktop and web applications. Key
-              features included inventory management, data extraction, content
-              management, and automation, enhancing overall efficiency and
-              streamlining business operations.
+              Developed and maintained an in-house system for house planners,
+              including desktop and web apps for inventory, data extraction,
+              content management, and automation, improving efficiency and
+              streamlining operations.
+            </List.Item>
+            <List.Item>
+              Converted Magic XPA desktop application into Web Application
             </List.Item>
           </List>
           <Group mt={20}>

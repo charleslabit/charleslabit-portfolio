@@ -3,7 +3,7 @@ html {
   scroll-padding-top: 150px;
 }
 
-.shortcut-button {
+.hover-effect {
   transition: all 0.3s ease;
 
   &:hover {
@@ -41,10 +41,6 @@ html {
   100% {
     transform: translateY(0);
   }
-}
-
-.bounce {
-  animation: bounce 1s ease-in-out infinite;
 }
 
 @keyframes fadeIn {

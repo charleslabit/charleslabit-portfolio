@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/default/ExsightMiniLogo.png" />
+        <link rel="icon" href="/next.svg" />
         {/* <ColorSchemeScript /> */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

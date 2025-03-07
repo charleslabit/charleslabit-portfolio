@@ -22,23 +22,10 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     Card: {
       defaultProps: {
         radius: "md",
-        withBorder: true,
       },
       styles: () => ({
         root: {
           wordBreak: "break-word",
-        },
-      }),
-    },
-    Paper: {
-      defaultProps: {
-        radius: "md",
-      },
-    },
-    Tabs: {
-      styles: () => ({
-        panel: {
-          marginTop: 15,
         },
       }),
     },
@@ -49,10 +36,10 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
       },
     },
 
-    Image: {
+    Badge: {
       styles: () => ({
         root: {
-          objectFit: "contain",
+          textTransform: "none",
         },
       }),
     },

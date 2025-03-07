@@ -1,5 +1,5 @@
 import { Card } from "@/component";
-import { Center, Grid, Image, Stack, Text } from "@mantine/core";
+import { Center, Flex, Grid, Image, Stack, Text } from "@mantine/core";
 
 export const AboutPage = () => {
   return (
@@ -39,12 +39,15 @@ export const AboutPage = () => {
             </Stack>
           </Grid.Col>
           <Grid.Col span={2} m="auto">
-            <Image
-              src="/default/ck-profile.png"
-              alt="ck-profile"
-              w={370}
-              h={"auto"}
-            />
+            <Flex justify={"center"}>
+              <Image
+                className="hover-effect"
+                src="/default/ck-profile.png"
+                alt="ck-profile"
+                w={370}
+                h={"auto"}
+              />
+            </Flex>
           </Grid.Col>
         </Grid>
       </Card>
