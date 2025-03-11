@@ -56,3 +56,7 @@ html {
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}

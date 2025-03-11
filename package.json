@@ -16,6 +16,7 @@
     "@mantine/notifications": "^7.17.1",
     "@tabler/icons-react": "^3.31.0",
     "@tanstack/react-query": "^5.67.1",
+    "embla-carousel-autoplay": "^7.1.0",
     "embla-carousel-react": "^7.1.0",
     "jotai": "^2.12.1",
     "next": "15.2.1",
