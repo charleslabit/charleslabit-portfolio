@@ -58,8 +58,6 @@ export const Megaworld = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           dragFree
-          slideSize="60%"
-          slideGap="xs"
           controlSize={40}
           nextControlIcon={<IconCircleChevronDown />}
           previousControlIcon={<IconCircleChevronUp />}

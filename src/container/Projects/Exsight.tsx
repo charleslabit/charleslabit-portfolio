@@ -52,14 +52,13 @@ export const Exsight = () => {
         <Carousel
           orientation="vertical"
           height={500}
+          style={{ height: 500 }}
           withIndicators
           loop
           plugins={[autoplay.current]}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           dragFree
-          slideSize="60%"
-          slideGap="xs"
           controlSize={40}
           nextControlIcon={<IconCircleChevronDown />}
           previousControlIcon={<IconCircleChevronUp />}
