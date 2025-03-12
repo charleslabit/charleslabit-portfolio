@@ -2,22 +2,14 @@ import { Card as MCard, Text } from "@mantine/core";
 import { useIntersection, useMediaQuery } from "@mantine/hooks";
 import { useEffect, useRef, useState } from "react";
 
-interface AnimatedCardProps {
-  children: React.ReactNode;
-  animation?: "fade" | "slide";
-  threshold?: number;
-}
-
 export const Card = ({
   children,
   id,
   title,
-  animation = "fade-in",
 }: {
   children: React.ReactNode;
   id?: string;
   title?: string;
-  animation?: "fade-in";
 }) => {
   const isMobile = useMediaQuery("(max-width: 1320px)");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -40,7 +32,7 @@ export const Card = ({
       withBorder={false}
       id={id}
       bg="transparent"
-      className={hasAnimated ? animation : ""}
+      className={hasAnimated ? "fade-in" : ""}
     >
       {title && (
         <Text fw="bold" fz={30}>
