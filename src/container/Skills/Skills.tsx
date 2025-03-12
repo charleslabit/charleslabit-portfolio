@@ -26,6 +26,7 @@ export const SkillsPage = () => {
             {skillSet.map((skill) => (
               <Stack m="auto" key={skill?.name} align="center">
                 <Image
+                  alt={skill?.name}
                   src={skill?.img}
                   h={"auto"}
                   w={55}

@@ -45,7 +45,7 @@ export const AboutPage = () => {
               <Image
                 className="hover-effect"
                 src="/default/ck-profile.png"
-                alt="ck-profile"
+                alt="charleslabit"
                 w={370}
                 h={"auto"}
               />
