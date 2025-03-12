@@ -41,7 +41,7 @@ export const PersonalProject = () => {
           </Text>
         </Stack>
 
-        <Paper w={400} m="auto">
+        <Paper h={400} m="auto">
           <Image
             src="default/e-commerce-products.png"
             alt="e-commerce-demo"

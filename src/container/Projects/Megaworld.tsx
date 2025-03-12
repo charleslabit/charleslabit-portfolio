@@ -9,13 +9,13 @@ import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
 const megaworldFeatures = [
-  "Booking and Reservation System: Allows users to view availability, make reservations, and manage bookings efficiently.",
-  "Content Management System (CMS): Enables administrators to manage website content, announcements, and promotions.",
-  "Messaging Feature: Provides a communication platform for inquiries, updates, and customer support.",
-  "Property and Revenue Management: Tracks property details, calculates revenue, and generates financial insights.",
-  "Approval Process: Implements a structured approval flow for reservations, content updates, or financial records to ensure proper oversight.",
-  "Role-Based Access Control (RBAC): Ensures secure access by assigning permissions based on user roles (e.g., admin, staff, customer).",
-  "FAQ Management: Allows administrators to create and manage frequently asked questions for improved user guidance.",
+  "Booking System: View availability, make reservations, and manage bookings.",
+  "CMS: Easily update website content, announcements, and promotions.",
+  "Messaging: Communicate via inquiries, updates, and support.",
+  "Property & Revenue Management: Track properties and generate financial insights.",
+  "Approval Workflow: Structured review process for bookings, content, and finances.",
+  "Role-Based Access: Secure system with admin, staff, and customer roles.",
+  "FAQ Management: Create and update frequently asked questions.",
 ];
 
 const megaworldImages = [
@@ -26,7 +26,7 @@ const megaworldImages = [
 ];
 
 export const Megaworld = () => {
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
 
   const handleMouseEnter = () => autoplay.current?.stop(); // Stop autoplay on hover
   const handleMouseLeave = () => autoplay.current?.play(); // Restart autoplay when hover ends
@@ -51,9 +51,10 @@ export const Megaworld = () => {
         </Paper>
         <Carousel
           orientation="vertical"
-          height={500}
+          height={400}
           withIndicators
           loop
+          m="auto"
           plugins={[autoplay.current]}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -63,8 +64,8 @@ export const Megaworld = () => {
           previousControlIcon={<IconCircleChevronUp />}
         >
           {megaworldImages.map((src, index) => (
-            <Carousel.Slide key={index}>
-              <FilePreview src={src} h={500} />
+            <Carousel.Slide key={index} h={300}>
+              <FilePreview src={src} h="100%" />
             </Carousel.Slide>
           ))}
         </Carousel>

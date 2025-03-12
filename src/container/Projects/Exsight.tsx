@@ -8,23 +8,23 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 const exsightFeatures = [
-  "Drag-and-Drop Interface: Easily build custom surveys using an intuitive drag-and-drop system for seamless question arrangement.",
-  "Element-Specific Settings: Each survey element comes with customizable settings, allowing fine-tuned control over labels, validations, visibility conditions, and styling.",
-  "Flexible Question Types: Supports various input types such as multiple choice, text fields, checkboxes, and more.",
-  "Conditional Logic: Enables dynamic question flows based on user responses for improved accuracy and relevance.",
-  "Data Collection & Management: Efficiently gathers, stores, and organizes survey responses for analysis.",
-  "Customizable Design: Offers flexible styling options to match branding requirements.",
-  "Export & Reporting: Provides detailed insights with exportable data for deeper analysis.",
-  "Role-Based Access Control: Ensures secure access with different permission levels for admins, editors, and viewers.",
-  "Local Save & Recovery: Progress is automatically saved locally, ensuring no data is lost during network issues.",
-  "Undo & Redo Functionality: Easily revert or restore recent changes to improve the building experience.",
-  "And More: Includes additional features to enhance user experience, improve data accuracy, and streamline survey management.",
+  "Drag-and-Drop Builder: Easily create surveys with a user-friendly interface.",
+  "Customizable Elements: Adjust labels, validations, visibility, and styling per element.",
+  "Multiple Question Types: Supports text fields, multiple choice, checkboxes, and more.",
+  "Conditional Logic: Show or hide questions based on user responses.",
+  "Data Management: Collect, store, and organize responses efficiently.",
+  "Custom Styling: Personalize survey appearance to match branding.",
+  "Export & Reports: Analyze data with exportable insights.",
+  "Role-Based Access: Secure access with admin, editor, and viewer roles.",
+  "Auto Save & Recovery: Prevents data loss during network issues.",
+  "Undo & Redo: Effortlessly revert or restore changes.",
+  "More Enhancements: Additional features to improve usability and accuracy.",
 ];
 
 const exsightImages = ["/default/formbuilder.png", "/default/role-setting.png"];
 
 export const Exsight = () => {
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
 
   const handleMouseEnter = () => autoplay.current?.stop(); // Stop autoplay on hover
   const handleMouseLeave = () => autoplay.current?.play(); // Restart autoplay when hover ends
@@ -51,10 +51,10 @@ export const Exsight = () => {
 
         <Carousel
           orientation="vertical"
-          height={500}
-          style={{ height: 500 }}
+          height={400}
           withIndicators
           loop
+          m="auto"
           plugins={[autoplay.current]}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -64,8 +64,8 @@ export const Exsight = () => {
           previousControlIcon={<IconCircleChevronUp />}
         >
           {exsightImages.map((src, index) => (
-            <Carousel.Slide key={index}>
-              <FilePreview src={src} h={500} />
+            <Carousel.Slide key={index} h={300}>
+              <FilePreview src={src} h={"100%"} />
             </Carousel.Slide>
           ))}
         </Carousel>
