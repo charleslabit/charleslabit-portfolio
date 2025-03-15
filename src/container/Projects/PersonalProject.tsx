@@ -1,6 +1,7 @@
 import { Card } from "@/component";
 import {
   Anchor,
+  Badge,
   Group,
   Image,
   Paper,
@@ -8,6 +9,18 @@ import {
   Stack,
   Text,
 } from "@mantine/core";
+
+const skills = [
+  "Next.js",
+  "Typescript",
+  "Javascript",
+  "Mantine UI",
+  "HTML",
+  "CSS",
+  "Tanstack Query",
+  "Zustand",
+  "Nuqs",
+];
 
 export const PersonalProject = () => {
   return (
@@ -34,11 +47,17 @@ export const PersonalProject = () => {
           </Group>
           <Text fz={16}>
             A responsive e-commerce demo built with Next.js 15.2.1 and Mantine
-            UI, featuring Zustand for state management. Implements Server-Side
-            Rendering (SSR) to improve initial load performance and utilizes
-            mock data to showcase product listings, cart functionality, and
-            dynamic UI interactions.
+            UI, showcasing a modular codebase with Zustand for state management
+            and TanStack for efficient data fetching. Implements Server-Side
+            Rendering (SSR) to optimize initial load performance. Features mock
+            product listings, cart functionality with state persistence, and
+            dynamic UI interactions. Checkout flow is not yet implemented.
           </Text>
+          <Group>
+            {skills.map((skill) => (
+              <Badge key={skill}>{skill}</Badge>
+            ))}
+          </Group>
         </Stack>
 
         <Paper h={400} m="auto">

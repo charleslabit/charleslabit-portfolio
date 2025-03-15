@@ -1,6 +1,14 @@
 import { Card, FilePreview } from "@/component";
 import { Carousel } from "@mantine/carousel";
-import { List, Paper, SimpleGrid, Stack, Text } from "@mantine/core";
+import {
+  Badge,
+  Group,
+  List,
+  Paper,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@mantine/core";
 import {
   IconCircleChevronDown,
   IconCircleChevronUp,
@@ -25,6 +33,24 @@ const megaworldImages = [
   "/default/mega4.png",
 ];
 
+const skills = [
+  "Next.js",
+  "Typescript",
+  "Javascript",
+  "Mantine UI",
+  "HTML",
+  "CSS",
+  "Zustand",
+  "Jotai",
+  "REST API",
+  "GraphQL",
+  "GraphQL Subscriptions",
+  "Amplify API (GraphQL)",
+  "Apollo GraphQL",
+  "Tanstack Query",
+  "AWS Cognito Auth",
+];
+
 export const Megaworld = () => {
   const autoplay = useRef(Autoplay({ delay: 5000 }));
 
@@ -34,20 +60,28 @@ export const Megaworld = () => {
     <Card>
       <SimpleGrid cols={{ lg: 2, md: 1 }} spacing={50}>
         <Paper m="auto">
-          <Stack gap={0}>
-            <Text fw="bold" fz={20}>
-              Comprehensive Property and Booking Management System
-            </Text>
-            <Text c="dimmed" fz={16}>
-              Developed a robust web application designed to streamline property
-              management operations. Key features include:
-            </Text>
+          <Stack>
+            <Stack gap={0}>
+              <Text fw="bold" fz={20}>
+                Comprehensive Property and Booking Management System
+              </Text>
+              <Text c="dimmed" fz={16}>
+                Developed a robust web application designed to streamline
+                property management operations. Key features include:
+              </Text>
+            </Stack>
+            <List>
+              {megaworldFeatures?.map((feature, i) => {
+                return <List.Item key={i}>{feature}</List.Item>;
+              })}
+            </List>
+
+            <Group>
+              {skills.map((skill) => (
+                <Badge key={skill}>{skill}</Badge>
+              ))}
+            </Group>
           </Stack>
-          <List>
-            {megaworldFeatures?.map((feature, i) => {
-              return <List.Item key={i}>{feature}</List.Item>;
-            })}
-          </List>
         </Paper>
         <Carousel
           orientation="vertical"

@@ -17,15 +17,13 @@ export const AboutPage = () => {
           <Grid.Col span={{ lg: 3, sm: 5, base: 5, xl: 3, md: 5 }}>
             <Stack>
               <Text>
-                Front-End Developer with nearly four years of experience and
-                close to seven years in software development, specializing in
-                React.js, Next.js, TypeScript, and Mantine UI. Previously worked
-                as a Junior Programmer for three years, performing full-stack
-                tasks with Magic XPA, Vue.js, Node.js, Express.js, and MySQL.
-                Now focused on front-end development, with expertise in building
-                performant UIs, scalable applications, and efficient CI/CD
-                pipelines. Experienced in deploying applications using AWS S3,
-                CloudFront, and Bitbucket CI/CD.
+                Front-End Developer with four years of experience and seven
+                years in software development, specializing in React.js,
+                Next.js, TypeScript, and Mantine UI. Previously a Junior
+                Programmer for three years, handling full-stack tasks with Magic
+                XPA, Vue.js, Node.js, and MySQL. Skilled in building performant
+                UIs, scalable apps, and CI/CD pipelines. Experienced in
+                deploying with AWS S3, CloudFront, and Bitbucket CI/CD.
               </Text>
               <Text>
                 I hold a Bachelor of Science in Computer Engineering from AMA

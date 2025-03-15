@@ -1,6 +1,6 @@
 import { Card, FilePreview } from "@/component";
 import { Carousel } from "@mantine/carousel";
-import { List, SimpleGrid, Stack, Text } from "@mantine/core";
+import { Badge, Group, List, SimpleGrid, Stack, Text } from "@mantine/core";
 import {
   IconCircleChevronDown,
   IconCircleChevronUp,
@@ -22,6 +22,26 @@ const exsightFeatures = [
 ];
 
 const exsightImages = ["/default/formbuilder.png", "/default/role-setting.png"];
+
+const skills = [
+  "Next.js",
+  "Typescript",
+  "Javascript",
+  "Mantine UI",
+  "HTML",
+  "CSS",
+  "Zustand",
+  "Jotai",
+  "Nuqs",
+  "REST API",
+  "GraphQL",
+  "GraphQL Subscriptions",
+  "Amplify API (GraphQL)",
+  "Apollo GraphQL",
+  "Tanstack Query",
+  "AWS Cognito Auth",
+  "Playwright",
+];
 
 export const Exsight = () => {
   const autoplay = useRef(Autoplay({ delay: 5000 }));
@@ -47,6 +67,11 @@ export const Exsight = () => {
               return <List.Item key={i}>{feature}</List.Item>;
             })}
           </List>
+          <Group>
+            {skills.map((skill) => (
+              <Badge key={skill}>{skill}</Badge>
+            ))}
+          </Group>
         </Stack>
 
         <Carousel
