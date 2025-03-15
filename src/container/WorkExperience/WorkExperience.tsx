@@ -85,7 +85,7 @@ const ExperienceBlock = ({
 export const WorkExperience = () => {
   return (
     <Center>
-      <Card id="exp" title="Work Experience">
+      <Card id="experience" title="Work Experience">
         {experienceData.map((exp, index) => (
           <ExperienceBlock key={index} {...exp} />
         ))}

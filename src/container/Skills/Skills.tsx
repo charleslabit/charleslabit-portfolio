@@ -1,5 +1,6 @@
 import { Card } from "@/component";
 import { Center, Image, SimpleGrid, Stack, Text } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 const skillSet = [
   { name: "React.js", img: "/default/react.png" },
@@ -18,11 +19,16 @@ const skillSet = [
 ];
 
 export const SkillsPage = () => {
+  const isMobile = useMediaQuery("(max-width: 1320px)");
   return (
     <Center>
       <Card id="skills" title="Technical Skills">
         <Stack justify="center" gap={100}>
-          <SimpleGrid cols={{ sm: 2, xs: 1, md: 3 }} w="50%" m="auto">
+          <SimpleGrid
+            cols={{ sm: 2, xs: 1, md: 3 }}
+            w={isMobile ? "100%" : "50%"}
+            m="auto"
+          >
             {skillSet.map((skill) => (
               <Stack m="auto" key={skill?.name} align="center">
                 <Image
