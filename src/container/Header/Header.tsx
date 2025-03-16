@@ -1,5 +1,5 @@
 import { Burger, Button, Center, Drawer, Group, Stack } from "@mantine/core";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Navigation sections
 const SECTIONS = ["home", "about", "skills", "experience", "projects"];
@@ -8,19 +8,23 @@ export const Header = () => {
   const [opened, setOpened] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Track the active section based on the URL hash
-  const updateActiveSection = useCallback(() => {
-    setActiveSection(window.location.hash.substring(1) || "home");
-  }, []);
-
   useEffect(() => {
+    const updateActiveSection = () => {
+      setActiveSection(window.location.hash.substring(1) || "home");
+    };
+
     window.addEventListener("hashchange", updateActiveSection);
     updateActiveSection(); // Set initial value
 
     return () => window.removeEventListener("hashchange", updateActiveSection);
-  }, [updateActiveSection]);
+  }, []);
 
-  const handleClick = (id: string) => {
+  const handleClick = (
+    id: string,
+    event?: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    if (event && id === "home") event.preventDefault(); // Prevent default for home
+
     window.location.hash = id;
     window.scrollTo({ top: 0, behavior: "smooth" });
     setOpened(false);
@@ -81,7 +85,7 @@ const NavButton = ({
 }: {
   id: string;
   activeSection: string;
-  onClick: (id: string) => void;
+  onClick: (id: string, event?: React.MouseEvent<HTMLAnchorElement>) => void;
   fullWidth?: boolean;
 }) => (
   <Button
@@ -90,7 +94,7 @@ const NavButton = ({
     component="a"
     href={`#${id}`}
     variant={activeSection === id ? "filled" : "light"} // Highlight active section
-    onClick={() => onClick(id)}
+    onClick={(event) => onClick(id, event)}
   >
     {id.charAt(0).toUpperCase() + id.slice(1)}
   </Button>
