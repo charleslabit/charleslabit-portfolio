@@ -1,7 +1,7 @@
 import { Layout } from "@/container/AppLayout";
 import "@mantine/carousel/styles.css";
 import "@mantine/core/styles.css";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./global.css";
@@ -19,8 +19,60 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Charles Kenneth Labit",
-  description: "Front End Developer",
+  title: "Charles Kenneth Labit | Front-End Developer",
+  description:
+    "A Front-End Developer specializing in building responsive and user-friendly web applications using React, Next.js, and TypeScript.",
+  keywords: [
+    "Front-End Developer",
+    "React Developer",
+    "Next.js",
+    "Next.js Portfolio",
+    "TypeScript",
+    "Web Developer",
+    "Mantine UI",
+    "JavaScript",
+    "JavaScript Developer",
+    "Software Engineer",
+  ],
+  authors: [
+    {
+      name: "Charles Labit",
+      url: "https://charleslabit-portfolio.vercel.app/",
+    },
+  ],
+  metadataBase: new URL("https://charleslabit-portfolio.vercel.app/"),
+
+  openGraph: {
+    title: "Charles Kenneth Labit | Front-End Developer",
+    description:
+      "Creating seamless and interactive web experiences with modern web technologies.",
+    url: "https://charleslabit-portfolio.vercel.app/",
+    siteName: "Charles Kenneth Labit Portfolio",
+    images: [
+      {
+        url: "https://charleslabit-portfolio.vercel.app/default/ck-profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Charles Kenneth Labit Cover",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Charles Kenneth Labit | Front-End Developer",
+    description:
+      "Building modern, responsive, and interactive web applications.",
+    images: [
+      "https://charleslabit-portfolio.vercel.app/default/ck-profile.png",
+    ],
+  },
+
+  // Robots Meta Tag (Controls indexing behavior)
+  robots: {
+    index: true, // Allow search engines to index
+    follow: true, // Allow following links
+  },
 };
 
 export default function RootLayout({
