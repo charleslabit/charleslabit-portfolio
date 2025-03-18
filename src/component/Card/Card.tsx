@@ -24,7 +24,7 @@ export const Card = ({
     if (entry?.isIntersecting && !hasAnimated) {
       setHasAnimated(true); // Mark as animated once it enters
     }
-  }, [entry?.isIntersecting]);
+  }, [entry?.isIntersecting, hasAnimated]);
 
   return (
     <MCard

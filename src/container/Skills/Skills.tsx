@@ -30,7 +30,7 @@ export const SkillsPage = () => {
             w={isMobile ? "100%" : "50%"}
             m="auto"
           >
-            {skillSet.map((skill, index) => (
+            {skillSet.map((skill) => (
               <Stack m="auto" align="center" key={skill.name}>
                 <Image
                   alt={skill.name}
