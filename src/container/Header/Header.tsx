@@ -2,7 +2,7 @@ import { Burger, Button, Center, Drawer, Group, Stack } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 // Navigation sections
-const SECTIONS = ["home", "about", "skills", "experience", "projects"];
+const SECTIONS = ["home", "skills", "experience", "projects"];
 
 export const Header = () => {
   const [opened, setOpened] = useState(false);

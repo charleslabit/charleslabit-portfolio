@@ -2,8 +2,8 @@ import { Card, FilePreview } from "@/component";
 import { Carousel } from "@mantine/carousel";
 import { Badge, Group, List, SimpleGrid, Stack, Text } from "@mantine/core";
 import {
-  IconCircleChevronDown,
-  IconCircleChevronUp,
+  IconCircleChevronLeft,
+  IconCircleChevronRight,
 } from "@tabler/icons-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
@@ -75,8 +75,7 @@ export const Exsight = () => {
         </Stack>
 
         <Carousel
-          orientation="vertical"
-          height={400}
+          height={"100%"}
           withIndicators
           loop
           m="auto"
@@ -85,11 +84,11 @@ export const Exsight = () => {
           onMouseLeave={handleMouseLeave}
           dragFree
           controlSize={40}
-          nextControlIcon={<IconCircleChevronDown />}
-          previousControlIcon={<IconCircleChevronUp />}
+          nextControlIcon={<IconCircleChevronRight />}
+          previousControlIcon={<IconCircleChevronLeft />}
         >
           {exsightImages.map((src, index) => (
-            <Carousel.Slide key={index} h={300}>
+            <Carousel.Slide key={index} h={"100%"}>
               <FilePreview src={src} h={"100%"} />
             </Carousel.Slide>
           ))}

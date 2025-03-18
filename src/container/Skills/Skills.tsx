@@ -20,6 +20,7 @@ const skillSet = [
 
 export const SkillsPage = () => {
   const isMobile = useMediaQuery("(max-width: 1320px)");
+
   return (
     <Center>
       <Card id="skills" title="Technical Skills">
@@ -29,17 +30,16 @@ export const SkillsPage = () => {
             w={isMobile ? "100%" : "50%"}
             m="auto"
           >
-            {skillSet.map((skill) => (
-              <Stack m="auto" key={skill?.name} align="center">
+            {skillSet.map((skill, index) => (
+              <Stack m="auto" align="center" key={skill.name}>
                 <Image
-                  alt={skill?.name}
-                  src={skill?.img}
+                  alt={skill.name}
+                  src={skill.img}
                   h={"auto"}
                   w={55}
                   radius={"25%"}
-                  className="hover-effect"
                 />
-                <Text>{skill?.name}</Text>
+                <Text>{skill.name}</Text>
               </Stack>
             ))}
           </SimpleGrid>
