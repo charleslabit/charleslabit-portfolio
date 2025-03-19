@@ -1,27 +1,28 @@
-import { isDarkModeAtom } from "@/store";
-import { ActionIcon, Tooltip } from "@mantine/core";
+import { ActionIcon, Tooltip, useMantineColorScheme } from "@mantine/core";
 import { IconMoon, IconSun } from "@tabler/icons-react";
-import { useAtom } from "jotai";
 
-export const ThemeSetting = () => {
-  const [isDarkMode, setIsDarkMode] = useAtom(isDarkModeAtom);
-
+export const ThemeSettings = () => {
+  const { setColorScheme, colorScheme } = useMantineColorScheme();
   const toggleDarkMode = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    localStorage.setItem("mode", newMode ? "dark" : "light");
+    const newColorScheme = colorScheme === "dark" ? "light" : "dark";
+    setColorScheme(newColorScheme);
   };
   return (
     <Tooltip
-      label={isDarkMode ? "Light Mode" : "Dark Mode"}
+      label={colorScheme === "dark" ? "Light Mode" : "Dark Mode"}
       events={{
         hover: true,
         focus: true,
         touch: true,
       }}
     >
-      <ActionIcon variant="transparent" onClick={toggleDarkMode}>
-        {isDarkMode ? <IconSun /> : <IconMoon />}
+      <ActionIcon
+        variant="transparent"
+        onClick={toggleDarkMode}
+        data-testid="theme-settings"
+        aria-label="Toggle Theme Settings"
+      >
+        {colorScheme === "dark" ? <IconSun /> : <IconMoon />}
       </ActionIcon>
     </Tooltip>
   );

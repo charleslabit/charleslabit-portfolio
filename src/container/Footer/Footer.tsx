@@ -1,4 +1,4 @@
-import { ThemeSetting } from "@/component";
+import { ThemeSettings } from "@/component";
 import { ActionIcon, Group } from "@mantine/core";
 import {
   IconBrandFacebookFilled,
@@ -10,7 +10,7 @@ import {
 export const Footer = () => {
   return (
     <Group>
-      <ThemeSetting />
+      <ThemeSettings />
       <ActionIcon
         variant="transparent"
         component="a"
