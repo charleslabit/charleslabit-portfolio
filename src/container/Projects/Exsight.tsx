@@ -1,11 +1,20 @@
-import { Card, FilePreview } from "@/component";
+import { Card } from "@/component";
 import { Carousel } from "@mantine/carousel";
-import { Badge, Group, List, SimpleGrid, Stack, Text } from "@mantine/core";
 import {
-  IconCircleChevronLeft,
-  IconCircleChevronRight,
+  AspectRatio,
+  Badge,
+  Group,
+  List,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@mantine/core";
+import {
+  IconCircleChevronLeftFilled,
+  IconCircleChevronRightFilled,
 } from "@tabler/icons-react";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 import { useRef } from "react";
 const exsightFeatures = [
   "Drag-and-Drop Builder: Easily create surveys with a user-friendly interface.",
@@ -75,21 +84,26 @@ export const Exsight = () => {
         </Stack>
 
         <Carousel
-          height={"100%"}
           withIndicators
           loop
-          m="auto"
           plugins={[autoplay.current]}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           dragFree
           controlSize={40}
-          nextControlIcon={<IconCircleChevronRight />}
-          previousControlIcon={<IconCircleChevronLeft />}
+          nextControlIcon={<IconCircleChevronRightFilled />}
+          previousControlIcon={<IconCircleChevronLeftFilled />}
         >
           {exsightImages.map((src, index) => (
-            <Carousel.Slide key={index} h={"100%"}>
-              <FilePreview src={src} h={"100%"} />
+            <Carousel.Slide key={index}>
+              <AspectRatio ratio={16 / 9} h={500}>
+                <Image
+                  alt={`Attachment-${index}`}
+                  src={src}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </AspectRatio>
             </Carousel.Slide>
           ))}
         </Carousel>
