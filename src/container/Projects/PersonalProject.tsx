@@ -13,14 +13,16 @@ import {
 
 const skills = [
   "Next.js",
-  "Typescript",
-  "Javascript",
+  "Next.js App Router API (Mock REST API)",
+  "NextAuth.js",
+  "TypeScript",
+  "JavaScript",
   "Mantine UI",
-  "HTML",
-  "CSS",
   "Tanstack Query",
   "Zustand",
   "Nuqs",
+  "Playwright",
+  "Vercel",
 ];
 
 const features = [

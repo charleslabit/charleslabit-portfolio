@@ -5,8 +5,8 @@ import { useMediaQuery } from "@mantine/hooks";
 const skillSet = [
   { name: "React.js", img: "/default/react.png" },
   { name: "Next.js", img: "/default/next.png" },
-  { name: "Typescript", img: "/default/ts.png" },
-  { name: "Javascript", img: "/default/js.png" },
+  { name: "TypeScript", img: "/default/ts.png" },
+  { name: "JavaScript", img: "/default/js.png" },
   { name: "HTML", img: "/default/html.png" },
   { name: "CSS", img: "/default/css.png" },
   { name: "TanStack Query", img: "/default/tanstack.jpg" },
