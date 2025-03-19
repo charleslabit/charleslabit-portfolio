@@ -1,49 +1,62 @@
 import { Card } from "@/component";
-import { Center, Image, SimpleGrid, Stack, Text } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { Center, Container, Grid, List, ThemeIcon, Title } from "@mantine/core";
+import { IconCheck } from "@tabler/icons-react";
 
-const skillSet = [
-  { name: "React.js", img: "/default/react.png" },
-  { name: "Next.js", img: "/default/next.png" },
-  { name: "TypeScript", img: "/default/ts.png" },
-  { name: "JavaScript", img: "/default/js.png" },
-  { name: "HTML", img: "/default/html.png" },
-  { name: "CSS", img: "/default/css.png" },
-  { name: "TanStack Query", img: "/default/tanstack.jpg" },
-  { name: "Zustand", img: "/default/zustand.jpg" },
-  { name: "Jotai", img: "/default/jotai.jpg" },
-  { name: "Nuqs", img: "/default/nuqs.png" },
-  { name: "Git", img: "/default/git.png" },
-  { name: "Mantine UI", img: "/default/mantine.png" },
-  { name: "Playwright", img: "/default/playwright.png" },
-];
+const skillCategories = {
+  Frontend: [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Mantine UI",
+    "HTML",
+    "CSS",
+  ],
+  "API Integration": [
+    "REST API",
+    "Apollo Client (GraphQL)",
+    "AWS Amplify API (GraphQL)",
+    "GraphQL (Queries, Mutations & Subscriptions)",
+  ],
+  "State Management": ["Zustand", "Jotai", "TanStack Query", "Nuqs"],
+  "DevOps, CI/CD & Deployment": [
+    "Vercel",
+    "Git",
+    "Bitbucket",
+    "AWS S3 and Cloudfront",
+  ],
+  Authentication: ["NextAuth.js", "AWS Cognito Auth"],
+  Testing: ["Playwright"],
+  "Project Management": ["Jira"],
+};
 
 export const SkillsPage = () => {
-  const isMobile = useMediaQuery("(max-width: 1320px)");
-
   return (
     <Center>
-      <Card id="skills" title="Technical Skills">
-        <Stack justify="center" gap={100}>
-          <SimpleGrid
-            cols={{ sm: 2, xs: 1, md: 3 }}
-            w={isMobile ? "100%" : "50%"}
-            m="auto"
-          >
-            {skillSet.map((skill) => (
-              <Stack m="auto" align="center" key={skill.name}>
-                <Image
-                  alt={skill.name}
-                  src={skill.img}
-                  h={"auto"}
-                  w={55}
-                  radius={"25%"}
-                />
-                <Text>{skill.name}</Text>
-              </Stack>
+      <Card id="skills" title="Tech Stack">
+        <Container size="lg">
+          <Grid>
+            {Object.entries(skillCategories).map(([category, skills]) => (
+              <Grid.Col key={category} span={{ sm: 6, md: 4 }}>
+                <Title order={4} mb="xs">
+                  {category}
+                </Title>
+                <List
+                  spacing="xs"
+                  icon={
+                    <ThemeIcon size={16}>
+                      <IconCheck size={14} />
+                    </ThemeIcon>
+                  }
+                >
+                  {skills.map((skill) => (
+                    <List.Item key={skill}>{skill}</List.Item>
+                  ))}
+                </List>
+              </Grid.Col>
             ))}
-          </SimpleGrid>
-        </Stack>
+          </Grid>
+        </Container>
       </Card>
     </Center>
   );

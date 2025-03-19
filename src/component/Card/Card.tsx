@@ -8,11 +8,13 @@ export const Card = ({
   id,
   title,
   animation = "fade-in",
+  withBorder = false,
 }: {
   children: React.ReactNode;
   id?: string;
   title?: string;
   animation?: "fade-in" | "slide-in";
+  withBorder?: boolean;
 }) => {
   const isMobile = useMediaQuery("(max-width: 1320px)");
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -30,7 +32,7 @@ export const Card = ({
     <MCard
       ref={ref}
       w={isMobile ? "auto" : 1300}
-      withBorder={false}
+      withBorder={withBorder}
       id={id}
       bg="transparent"
       className={hasAnimated ? animation : styles["card-hidden"]}

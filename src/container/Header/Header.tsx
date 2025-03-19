@@ -2,7 +2,7 @@ import { Burger, Button, Center, Drawer, Group, Stack } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 // Navigation sections
-const SECTIONS = ["home", "skills", "experience", "projects"];
+const SECTIONS = ["home", "skills", "experience", "projects"] as const;
 
 export const Header = () => {
   const [opened, setOpened] = useState(false);
@@ -10,14 +10,15 @@ export const Header = () => {
 
   useEffect(() => {
     const updateActiveSection = () => {
-      setActiveSection(window.location.hash.substring(1) || "home");
+      const newSection = window.location.hash.substring(1) || "home";
+      if (newSection !== activeSection) setActiveSection(newSection);
     };
 
     window.addEventListener("hashchange", updateActiveSection);
     updateActiveSection(); // Set initial value
 
     return () => window.removeEventListener("hashchange", updateActiveSection);
-  }, []);
+  }, [activeSection]);
 
   const handleClick = (
     id: string,

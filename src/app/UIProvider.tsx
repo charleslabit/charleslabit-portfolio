@@ -52,6 +52,7 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
       styles: () => ({
         root: {
           textTransform: "none",
+          padding: 14,
         },
       }),
     },
@@ -61,7 +62,7 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     components: themeComponents,
     primaryColor: "light",
     fontFamily: "Helvetica",
-    white: "#FFFFF0", // Replace white color
+    white: "#EEF2F6", // Replace white color
     black: "#333333",
     colors: {
       light: [

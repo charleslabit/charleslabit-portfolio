@@ -108,7 +108,7 @@ export const Megaworld = () => {
               })}
             </List>
 
-            <Group>
+            <Group gap={10}>
               {skills.map((skill) => (
                 <Badge key={skill}>{skill}</Badge>
               ))}

@@ -19,56 +19,48 @@ import { useRef } from "react";
 const exsightFeatures = [
   {
     title: "Drag-and-Drop Builder",
-    description:
-      "Easily create surveys with an intuitive, user-friendly interface.",
+    description: "Easily create surveys with an intuitive interface.",
   },
   {
     title: "Customizable Elements",
-    description:
-      "Adjust labels, validations, visibility, and styling for each survey element.",
+    description: "Adjust labels, validations, visibility, and styling.",
   },
   {
     title: "Multiple Question Types",
-    description:
-      "Supports text fields, multiple choice, checkboxes, dropdowns, and more.",
+    description: "Supports text fields, multiple choice, checkboxes, and more.",
   },
   {
     title: "Conditional Logic",
-    description: "Dynamically show or hide questions based on user responses.",
+    description: "Dynamically show or hide questions based on responses.",
   },
   {
     title: "Data Management",
     description:
-      "Collect, store, and organize responses efficiently with structured data handling.",
+      "Organize and store responses efficiently with structured data.",
   },
   {
     title: "Custom Styling",
-    description: "Personalize survey appearance to match your brand identity.",
+    description: "Personalize surveys to match your brand identity.",
   },
   {
     title: "Export & Reports",
-    description:
-      "Analyze collected data with exportable insights and reporting tools.",
+    description: "Analyze data with exportable insights and reports.",
   },
   {
     title: "Role-Based Access",
-    description:
-      "Secure the platform with different access levels for admins, editors, and viewers.",
+    description: "Secure platform access for admins, editors, and viewers.",
   },
   {
     title: "Auto Save & Recovery",
-    description:
-      "Prevents data loss by automatically saving progress, even during network disruptions.",
+    description: "Prevent data loss by auto-saving progress.",
   },
   {
     title: "Undo & Redo",
-    description:
-      "Effortlessly revert or restore changes while designing surveys.",
+    description: "Effortlessly revert or restore changes.",
   },
   {
     title: "More Enhancements",
-    description:
-      "Additional features to improve usability, accuracy, and overall survey experience.",
+    description: "Additional features to enhance usability and accuracy.",
   },
 ];
 
@@ -119,7 +111,7 @@ export const Exsight = () => {
               );
             })}
           </List>
-          <Group>
+          <Group gap={10}>
             {skills.map((skill) => (
               <Badge key={skill}>{skill}</Badge>
             ))}
@@ -139,7 +131,7 @@ export const Exsight = () => {
         >
           {exsightImages.map((src, index) => (
             <Carousel.Slide key={index}>
-              <AspectRatio ratio={16 / 9} h={720}>
+              <AspectRatio ratio={16 / 9} h={500}>
                 <Image
                   alt={`Attachment-${index}`}
                   src={src}

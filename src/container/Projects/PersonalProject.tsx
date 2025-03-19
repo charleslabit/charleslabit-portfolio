@@ -13,7 +13,7 @@ import {
 
 const skills = [
   "Next.js",
-  "Next.js App Router API (Mock REST API)",
+  "Next.js App Router(Mock REST API)",
   "NextAuth.js",
   "TypeScript",
   "JavaScript",
@@ -50,7 +50,7 @@ const features = [
   },
   {
     title: "Performance Optimized",
-    description: "Hosted on Vercel for a fast, seamless experience.",
+    description: "Fast and seamless, deployed on Vercel.",
   },
   {
     title: "Fully Responsive",
@@ -64,8 +64,7 @@ export const PersonalProject = () => {
       <SimpleGrid cols={{ lg: 2, md: 1 }}>
         <Stack>
           <Text fw="bold" fz={20}>
-            CK Mart | E-Commerce Demo (Static, Fully Interactive, with
-            Authentication, Dark Mode & Filters)
+            CK Mart | Interactive E-Commerce Demo (Static, Auth, Dark Mode)
           </Text>
           <Group>
             <Anchor
@@ -97,7 +96,7 @@ export const PersonalProject = () => {
               </List.Item>
             ))}
           </List>
-          <Group>
+          <Group gap={10}>
             {skills.map((skill) => (
               <Badge key={skill}>{skill}</Badge>
             ))}
