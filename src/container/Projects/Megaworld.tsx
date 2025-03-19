@@ -19,13 +19,41 @@ import Image from "next/image";
 import { useRef } from "react";
 
 const megaworldFeatures = [
-  "Booking System: View availability, make reservations, and manage bookings.",
-  "CMS: Easily update website content, announcements, and promotions.",
-  "Messaging: Communicate via inquiries, updates, and support.",
-  "Property & Revenue Management: Track properties and generate financial insights.",
-  "Approval Workflow: Structured review process for bookings, content, and finances.",
-  "Role-Based Access: Secure system with admin, staff, and customer roles.",
-  "FAQ Management: Create and update frequently asked questions.",
+  {
+    title: "Booking System",
+    description:
+      "View availability, make reservations, and manage bookings efficiently.",
+  },
+  {
+    title: "CMS",
+    description:
+      "Easily update website content, announcements, and promotions.",
+  },
+  {
+    title: "Messaging",
+    description:
+      "Communicate via inquiries, updates, and support for better customer engagement.",
+  },
+  {
+    title: "Property & Revenue Management",
+    description:
+      "Track properties and generate financial insights to optimize revenue.",
+  },
+  {
+    title: "Approval Workflow",
+    description:
+      "Structured review process for bookings, content updates, and financial approvals.",
+  },
+  {
+    title: "Role-Based Access",
+    description:
+      "Secure system with different access levels for admin, staff, and customers.",
+  },
+  {
+    title: "FAQ Management",
+    description:
+      "Create, update, and manage frequently asked questions to assist users.",
+  },
 ];
 
 const megaworldImages = [
@@ -69,12 +97,17 @@ export const Megaworld = () => {
               </Text>
               <Text c="dimmed" fz={16}>
                 Developed a robust web application designed to streamline
-                property management operations. Key features include:
+                property management operations.
               </Text>
             </Stack>
+            <Text fz={16}>Key Features:</Text>
             <List>
-              {megaworldFeatures?.map((feature, i) => {
-                return <List.Item key={i}>{feature}</List.Item>;
+              {megaworldFeatures?.map(({ title, description }) => {
+                return (
+                  <List.Item key={title}>
+                    <strong>{title}</strong> – {description}
+                  </List.Item>
+                );
               })}
             </List>
 
@@ -98,7 +131,7 @@ export const Megaworld = () => {
         >
           {megaworldImages.map((src, index) => (
             <Carousel.Slide key={index}>
-              <AspectRatio ratio={16 / 9} h={400}>
+              <AspectRatio ratio={16 / 9} h={520}>
                 <Image
                   alt={`Attachment-${index}`}
                   src={src}

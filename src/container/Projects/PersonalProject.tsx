@@ -4,6 +4,7 @@ import {
   Badge,
   Group,
   Image,
+  List,
   Paper,
   SimpleGrid,
   Stack,
@@ -22,13 +23,47 @@ const skills = [
   "Nuqs",
 ];
 
+const features = [
+  {
+    title: "Dynamic CRUD Operations",
+    description:
+      "Manage product data with TanStack Query, no persistence required.",
+  },
+  {
+    title: "State Management",
+    description: "Uses Zustand for efficient and responsive cart handling.",
+  },
+  {
+    title: "Authentication",
+    description:
+      "Sign in with GitHub/Google via NextAuth.js to access database management (no data stored).",
+  },
+  {
+    title: "Dark Mode",
+    description: "Seamless theme toggling between light and dark modes.",
+  },
+  {
+    title: "Filtering & Sorting",
+    description: "Easily search and filter products by category.",
+  },
+  {
+    title: "Performance Optimized",
+    description: "Hosted on Vercel for a fast, seamless experience.",
+  },
+  {
+    title: "Fully Responsive",
+    description: "Works smoothly on all devices.",
+  },
+];
+
 export const PersonalProject = () => {
   return (
     <Card>
       <SimpleGrid cols={{ lg: 2, md: 1 }}>
         <Stack>
           <Text fw="bold" fz={20}>
-            CK Mart | Personal Project
+            CK Mart | E-Commerce Demo (Static, Fully Interactive, with
+            Authentication, Dark Mode & Filters)
           </Text>
           <Group>
             <Anchor
@@ -46,13 +81,20 @@ export const PersonalProject = () => {
             </Anchor>
           </Group>
           <Text fz={16}>
-            A responsive e-commerce demo built with Next.js 15.2.1 and Mantine
-            UI, showcasing a modular codebase with Zustand for state management
-            and TanStack for efficient data fetching. Implements Server-Side
-            Rendering (SSR) to optimize initial load performance. Features mock
-            product listings, cart functionality with state persistence, and
-            dynamic UI interactions. Checkout flow is not yet implemented.
+            This is a fully responsive e-commerce demo showcasing dynamic
+            functionality without a backend database. Built with Next.js,
+            TanStack Query, and Zustand, the project enables users to browse
+            products, perform CRUD operations, and manage their cart—all within
+            a static environment.
           </Text>
+          <Text fz={16}>Key Features:</Text>
+          <List>
+            {features.map(({ title, description }) => (
+              <List.Item key={title}>
+                <strong>{title}</strong> – {description}
+              </List.Item>
+            ))}
+          </List>
           <Group>
             {skills.map((skill) => (
               <Badge key={skill}>{skill}</Badge>

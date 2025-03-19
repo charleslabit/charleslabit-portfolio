@@ -17,17 +17,59 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useRef } from "react";
 const exsightFeatures = [
-  "Drag-and-Drop Builder: Easily create surveys with a user-friendly interface.",
-  "Customizable Elements: Adjust labels, validations, visibility, and styling per element.",
-  "Multiple Question Types: Supports text fields, multiple choice, checkboxes, and more.",
-  "Conditional Logic: Show or hide questions based on user responses.",
-  "Data Management: Collect, store, and organize responses efficiently.",
-  "Custom Styling: Personalize survey appearance to match branding.",
-  "Export & Reports: Analyze data with exportable insights.",
-  "Role-Based Access: Secure access with admin, editor, and viewer roles.",
-  "Auto Save & Recovery: Prevents data loss during network issues.",
-  "Undo & Redo: Effortlessly revert or restore changes.",
-  "More Enhancements: Additional features to improve usability and accuracy.",
+  {
+    title: "Drag-and-Drop Builder",
+    description:
+      "Easily create surveys with an intuitive, user-friendly interface.",
+  },
+  {
+    title: "Customizable Elements",
+    description:
+      "Adjust labels, validations, visibility, and styling for each survey element.",
+  },
+  {
+    title: "Multiple Question Types",
+    description:
+      "Supports text fields, multiple choice, checkboxes, dropdowns, and more.",
+  },
+  {
+    title: "Conditional Logic",
+    description: "Dynamically show or hide questions based on user responses.",
+  },
+  {
+    title: "Data Management",
+    description:
+      "Collect, store, and organize responses efficiently with structured data handling.",
+  },
+  {
+    title: "Custom Styling",
+    description: "Personalize survey appearance to match your brand identity.",
+  },
+  {
+    title: "Export & Reports",
+    description:
+      "Analyze collected data with exportable insights and reporting tools.",
+  },
+  {
+    title: "Role-Based Access",
+    description:
+      "Secure the platform with different access levels for admins, editors, and viewers.",
+  },
+  {
+    title: "Auto Save & Recovery",
+    description:
+      "Prevents data loss by automatically saving progress, even during network disruptions.",
+  },
+  {
+    title: "Undo & Redo",
+    description:
+      "Effortlessly revert or restore changes while designing surveys.",
+  },
+  {
+    title: "More Enhancements",
+    description:
+      "Additional features to improve usability, accuracy, and overall survey experience.",
+  },
 ];
 
 const exsightImages = ["/default/formbuilder.png", "/default/role-setting.png"];
@@ -67,13 +109,17 @@ export const Exsight = () => {
             </Text>
             <Text c="dimmed" fz={16}>
               Developed a powerful survey-building platform designed to
-              streamline data collection and enhance user experience. Key
-              features include:
+              streamline data collection and enhance user experience.
             </Text>
           </Stack>
+          <Text fz={16}>Key Features:</Text>
           <List>
-            {exsightFeatures?.map((feature, i) => {
-              return <List.Item key={i}>{feature}</List.Item>;
+            {exsightFeatures?.map(({ title, description }) => {
+              return (
+                <List.Item key={title}>
+                  <strong>{title}</strong> – {description}
+                </List.Item>
+              );
             })}
           </List>
           <Group>
@@ -96,7 +142,7 @@ export const Exsight = () => {
         >
           {exsightImages.map((src, index) => (
             <Carousel.Slide key={index}>
-              <AspectRatio ratio={16 / 9} h={500}>
+              <AspectRatio ratio={16 / 9} h={720}>
                 <Image
                   alt={`Attachment-${index}`}
                   src={src}
