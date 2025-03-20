@@ -25,6 +25,17 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
       defaultProps: {
         radius: "md",
       },
+      styles: (theme) => {
+        const colorScheme = document.documentElement.getAttribute(
+          "data-mantine-color-scheme"
+        ); // "light" or "dark"
+        const isDarkMode = colorScheme === "dark";
+        return {
+          root: {
+            color: isDarkMode ? theme.white : theme.colors.customPrimary[10],
+          },
+        };
+      },
     }),
     Stack: {
       defaultProps: {
@@ -49,6 +60,11 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
         variant: "text",
       },
     },
+    Group: {
+      defaultProps: {
+        gap: 10,
+      },
+    },
 
     Badge: {
       styles: () => ({
@@ -65,8 +81,8 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     components: themeComponents,
     primaryColor: "customPrimary",
     fontFamily: "Helvetica",
-    white: "#EEF2F6", // Replace white color
-    black: "#333333",
+    white: "#FFFFFF", // Pure white for contrast
+    black: "#1A1A1A", // Darker black for better contrast
     colors: {
       light: [
         "#F1F8FF", // Light blue background
@@ -80,17 +96,18 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
         "#0D47A1", // Royal blue for highlights or active elements
         "#003366", // Midnight blue for backgrounds or text
       ],
+
       customPrimary: [
-        "#7B61FF", // Electric Purple (Primary)
-        "#6A52E5",
-        "#5A44CC",
-        "#4B37B3",
-        "#3D2B99",
-        "#2F207F",
-        "#241867",
-        "#1A1250",
-        "#110C3A",
-        "#090625",
+        "#A48BFF", // ⚡ Improved contrast Electric Purple
+        "#8D74FF", // Slightly lighter for better readability
+        "#755CFF", // Stronger contrast primary
+        "#634BE6",
+        "#523ACC",
+        "#422CB3",
+        "#322099",
+        "#261880",
+        "#1B1266",
+        "#120C4D",
       ],
     },
   });
