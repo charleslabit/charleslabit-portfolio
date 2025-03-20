@@ -5,9 +5,11 @@ import { PersonalProject } from "./PersonalProject";
 
 export const Projects = () => {
   return (
-    <Box id="projects">
+    <Box>
       <Stack align="center">
-        <Text fw="bold">Personal Project</Text>
+        <Text fw="bold" id="projects">
+          Personal Project
+        </Text>
         <PersonalProject />
       </Stack>
 
