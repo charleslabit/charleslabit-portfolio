@@ -1,38 +1,22 @@
 import { SECTIONS } from "@/constants";
 import useActiveSection from "@/hooks/useActiveSection";
 import { Burger, Button, Center, Drawer, Group, Stack } from "@mantine/core";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export const Header = () => {
   const [opened, setOpened] = useState(false);
   const { activeSection, setActiveSectionManually } = useActiveSection();
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false); // Button disable state
-  const debounceTimer = useRef<NodeJS.Timeout | null>(null); // Ref for managing the debounce timer
 
   const handleClick = (
     id: string,
     event?: React.MouseEvent<HTMLAnchorElement>
   ) => {
-    // If the button is disabled, do nothing
-    if (isButtonDisabled) return;
-
-    // Disable the button to prevent spamming
-    setIsButtonDisabled(true);
-
     if (event && id === "home") {
       event.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     } // Prevent default for home
-
     setActiveSectionManually(id);
     setOpened(false);
-
-    // Reset button state after a delay (debounce effect)
-    if (debounceTimer.current) clearTimeout(debounceTimer.current);
-
-    debounceTimer.current = setTimeout(() => {
-      setIsButtonDisabled(false); // Re-enable button after delay
-    }, 200); // Adjust debounce delay (200ms)
   };
 
   return (

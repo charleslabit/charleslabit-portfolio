@@ -31,10 +31,10 @@ export default function useActiveSection() {
           debounceTimer.current = setTimeout(() => {
             setActiveSection(visibleSection as string);
             history.replaceState(null, "", `#${visibleSection}`);
-          }, 200); // Adjust delay (200ms is a good balance) //prevent spamming whenever scrolling frequently
+          }, 1000);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.7 }
     );
 
     const sectionElements = SECTIONS.map((id) =>
