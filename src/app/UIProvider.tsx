@@ -26,10 +26,12 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
         radius: "md",
       },
       styles: (theme) => {
-        const colorScheme = document.documentElement.getAttribute(
-          "data-mantine-color-scheme"
-        ); // "light" or "dark"
+        const colorScheme =
+          document.documentElement.getAttribute("data-mantine-color-scheme") ||
+          localStorage.getItem("mantine-color-scheme-value");
+
         const isDarkMode = colorScheme === "dark";
+
         return {
           root: {
             color: isDarkMode ? theme.white : theme.colors.customPrimary[10],
@@ -114,8 +116,8 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <ColorSchemeScript forceColorScheme={"dark"} />
-      <MantineProvider theme={theme} defaultColorScheme="dark">
+      <ColorSchemeScript forceColorScheme={"light"} />
+      <MantineProvider theme={theme} defaultColorScheme="auto">
         <Notifications position="top-right" />
         <ModalsProvider modalProps={{ centered: true }}>
           {children}
