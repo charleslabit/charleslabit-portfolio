@@ -131,12 +131,15 @@ export const Exsight = () => {
         >
           {exsightImages.map((src, index) => (
             <Carousel.Slide key={index}>
-              <AspectRatio ratio={16 / 9} h={500}>
+              <AspectRatio ratio={16 / 9} h={500} pos="relative">
                 <Image
                   alt={`Attachment-${index}`}
                   src={src}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+                  style={{
+                    objectFit: "contain",
+                  }}
                 />
               </AspectRatio>
             </Carousel.Slide>

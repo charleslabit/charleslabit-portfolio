@@ -1,15 +1,22 @@
 import { Card } from "@/component";
+import { Carousel } from "@mantine/carousel";
 import {
   Anchor,
+  AspectRatio,
   Badge,
   Group,
-  Image,
   List,
-  Paper,
   SimpleGrid,
   Stack,
   Text,
 } from "@mantine/core";
+import {
+  IconCircleChevronLeftFilled,
+  IconCircleChevronRightFilled,
+} from "@tabler/icons-react";
+import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
+import { useRef } from "react";
 
 const skills = [
   "Next.js",
@@ -58,10 +65,20 @@ const features = [
   },
 ];
 
+const demoProjImages = [
+  "/default/e-commerce-products.png",
+  "/default/e-commerce-cart.png",
+  "/default/e-commerce-categories.png",
+];
+
 export const PersonalProject = () => {
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
+
+  const handleMouseEnter = () => autoplay.current?.stop(); // Stop autoplay on hover
+  const handleMouseLeave = () => autoplay.current?.play(); // Restart autoplay when hover ends
   return (
     <Card>
-      <SimpleGrid cols={{ lg: 2, md: 1 }}>
+      <SimpleGrid cols={{ lg: 2, md: 1 }} spacing={50}>
         <Stack>
           <Text fw="bold" fz={20}>
             CK Mart | Interactive E-Commerce Demo (Static, Auth, Dark Mode)
@@ -103,15 +120,33 @@ export const PersonalProject = () => {
           </Group>
         </Stack>
 
-        <Paper h={400} m="auto">
-          <Image
-            src="default/e-commerce-products.png"
-            alt="e-commerce-demo"
-            h={"100%"}
-            w="100%"
-            fit="contain"
-          />
-        </Paper>
+        <Carousel
+          withIndicators
+          loop
+          plugins={[autoplay.current]}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          dragFree
+          controlSize={40}
+          nextControlIcon={<IconCircleChevronRightFilled />}
+          previousControlIcon={<IconCircleChevronLeftFilled />}
+        >
+          {demoProjImages.map((src, index) => (
+            <Carousel.Slide key={index}>
+              <AspectRatio ratio={16 / 9} h={520} pos="relative">
+                <Image
+                  alt={`Attachment-${index}`}
+                  src={src}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+                  style={{
+                    objectFit: "contain",
+                  }}
+                />
+              </AspectRatio>
+            </Carousel.Slide>
+          ))}
+        </Carousel>
       </SimpleGrid>
     </Card>
   );

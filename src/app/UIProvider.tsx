@@ -16,6 +16,7 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setHydrated(true);
   }, []);
+
   // Avoid hydration errors: Don't render until the app is hydrated  this is for theme settings
   if (!hydrated) return null;
 
@@ -45,6 +46,7 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     Text: {
       defaultProps: {
         fz: 25,
+        variant: "text",
       },
     },
 
@@ -57,10 +59,11 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
       }),
     },
   };
+
   const theme = createTheme({
     cursorType: "pointer",
     components: themeComponents,
-    primaryColor: "light",
+    primaryColor: "customPrimary",
     fontFamily: "Helvetica",
     white: "#EEF2F6", // Replace white color
     black: "#333333",
@@ -76,6 +79,18 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
         "#1A237E", // Very dark blue-indigo for footer or strong emphasis
         "#0D47A1", // Royal blue for highlights or active elements
         "#003366", // Midnight blue for backgrounds or text
+      ],
+      customPrimary: [
+        "#7B61FF", // Electric Purple (Primary)
+        "#6A52E5",
+        "#5A44CC",
+        "#4B37B3",
+        "#3D2B99",
+        "#2F207F",
+        "#241867",
+        "#1A1250",
+        "#110C3A",
+        "#090625",
       ],
     },
   });
