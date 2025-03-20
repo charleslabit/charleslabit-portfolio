@@ -128,8 +128,12 @@ export const PersonalProject = () => {
           onMouseLeave={handleMouseLeave}
           dragFree
           controlSize={40}
-          nextControlIcon={<IconCircleChevronRightFilled />}
-          previousControlIcon={<IconCircleChevronLeftFilled />}
+          nextControlIcon={
+            <IconCircleChevronRightFilled aria-label="Next Carousel" />
+          }
+          previousControlIcon={
+            <IconCircleChevronLeftFilled aria-label="Previous Carousel" />
+          }
         >
           {demoProjImages.map((src, index) => (
             <Carousel.Slide key={index}>

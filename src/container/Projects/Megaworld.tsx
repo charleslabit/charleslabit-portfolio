@@ -123,8 +123,12 @@ export const Megaworld = () => {
           onMouseLeave={handleMouseLeave}
           dragFree
           controlSize={40}
-          nextControlIcon={<IconCircleChevronRightFilled />}
-          previousControlIcon={<IconCircleChevronLeftFilled />}
+          nextControlIcon={
+            <IconCircleChevronRightFilled aria-label="Next Carousel" />
+          }
+          previousControlIcon={
+            <IconCircleChevronLeftFilled aria-label="Previous Carousel" />
+          }
         >
           {megaworldImages.map((src, index) => (
             <Carousel.Slide key={index}>
