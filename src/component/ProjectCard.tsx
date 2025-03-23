@@ -50,6 +50,7 @@ export default function ProjectCard({
           <Image src={image} alt={title} height={"300"} fit="contain" />
 
           <Overlay
+            zIndex={10}
             h="100%"
             w="100%"
             backgroundOpacity={0.7}
