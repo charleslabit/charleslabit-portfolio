@@ -8,7 +8,7 @@ export const Projects = () => {
     <Box>
       <Stack align="center">
         <Text fw="bold" id="projects">
-          Personal Project
+          Personal Projects
         </Text>
         <PersonalProject />
       </Stack>

@@ -113,7 +113,9 @@ export const Exsight = () => {
           </List>
           <Group>
             {skills.map((skill) => (
-              <Badge key={skill}>{skill}</Badge>
+              <Badge key={skill} variant="light">
+                {skill}
+              </Badge>
             ))}
           </Group>
         </Stack>

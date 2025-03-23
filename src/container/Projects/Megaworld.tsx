@@ -110,7 +110,9 @@ export const Megaworld = () => {
 
             <Group>
               {skills.map((skill) => (
-                <Badge key={skill}>{skill}</Badge>
+                <Badge key={skill} variant="light">
+                  {skill}
+                </Badge>
               ))}
             </Group>
           </Stack>
@@ -122,7 +124,6 @@ export const Megaworld = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           dragFree
-          controlSize={40}
           nextControlIcon={
             <IconCircleChevronRightFilled aria-label="Next Carousel" />
           }
