@@ -9,6 +9,7 @@ import {
   Overlay,
   Stack,
   Text,
+  Tooltip,
 } from "@mantine/core";
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 import { useState } from "react";
@@ -73,9 +74,11 @@ export default function ProjectCard({
           <Text fw={600} size="lg" lineClamp={2}>
             {title}
           </Text>
-          <Text size="sm" c="dimmed" lineClamp={2}>
-            {description}
-          </Text>
+          <Tooltip label={description}>
+            <Text size="sm" c="dimmed" lineClamp={2}>
+              {description}
+            </Text>
+          </Tooltip>
 
           <Group mt="sm" gap="xs" justify="center">
             {techStack.map((tech) => (
