@@ -12,7 +12,7 @@ export const DoctorsNote = () => {
       liveDemo="https://my-doctors-note-six.vercel.app/"
       github="https://github.com/charleslabit/my-doctors-note"
       referenceSite="https://mydoctorsnote.co"
-      overlayDescription="Finished in under 15 hours. ⏰"
+      overlayDescription="A static clone of My Doctor's Note, created for a technical assessment."
     />
   );
 };

@@ -21,7 +21,7 @@ export const CKMart = () => {
       techStack={stack}
       liveDemo="https://ecommerce-demo-orpin.vercel.app/"
       github="https://github.com/charleslabit/ecommerce-demo/"
-      overlayDescription="Ongoing development - new features coming soon! 🛠️"
+      overlayDescription="A static e-commerce demo with client-side state management using TanStack Query and Zustand."
     />
   );
 };

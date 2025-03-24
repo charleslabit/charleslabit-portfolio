@@ -18,7 +18,7 @@ export const Nyetflix = () => {
       techStack={stack}
       liveDemo="https://nyetflix.vercel.app/" // Update if deployed URL changed
       github="https://github.com/charleslabit/nyetflix" // Update if repo name changed
-      overlayDescription="Browse movies seamlessly with infinite scrolling! 🎬"
+      overlayDescription="A movie browsing app powered by TMDb API, featuring infinite scrolling and real-time data fetching using TanStack Query."
     />
   );
 };

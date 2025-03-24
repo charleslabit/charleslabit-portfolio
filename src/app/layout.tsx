@@ -86,7 +86,10 @@ export default function RootLayout({
         <link rel="icon" href="/next.svg" />
         {/* <ColorSchemeScript /> */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+        suppressHydrationWarning
+      >
         <QueryProvider>
           <UIProvider>
             <NuqsAdapter>
