@@ -4,6 +4,7 @@ import { ChatApp } from "./ChatApp";
 import { CKMart } from "./CKMart";
 import { DoctorsNote } from "./DoctorsNote";
 import { Nyetflix } from "./Nyetflix";
+import { TodoMySQL } from "./TodoMySQL";
 
 export const PersonalProject = () => {
   return (
@@ -12,6 +13,7 @@ export const PersonalProject = () => {
         <CKMart />
         <ChatApp />
         <Nyetflix />
+        <TodoMySQL />
         <DoctorsNote />
       </SimpleGrid>
     </Card>
