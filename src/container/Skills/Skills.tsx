@@ -17,17 +17,27 @@ const skillCategories = {
     "Apollo Client (GraphQL)",
     "AWS Amplify API (GraphQL)",
     "GraphQL (Queries, Mutations & Subscriptions)",
+    "Axios",
   ],
   "State Management": ["Zustand", "Jotai", "TanStack Query", "Nuqs"],
   "DevOps, CI/CD & Deployment": [
     "Vercel",
-    "Git",
+    "Git / Github",
     "Bitbucket",
     "AWS S3 and Cloudfront",
+    "Railway",
   ],
-  Authentication: ["NextAuth.js", "AWS Cognito Auth"],
-  Testing: ["Playwright"],
-  "Project Management": ["Jira"],
+  Authentication: ["AWS Cognito Auth", "JWT", "NextAuth.js"],
+  "API Development & Testing": ["Postman", "Insomnia", "Bruno"],
+  "Backend, Databases & Tools (Familiar With)": [
+    "Node.js",
+    "Express.js",
+    "Supabase",
+    "MySQL",
+    "TablePlus",
+  ],
+  "Project Management & Collaboration": ["Jira", "Slack"],
+  "End-to-End Testing": ["Playwright"],
 };
 
 export const SkillsPage = () => {
