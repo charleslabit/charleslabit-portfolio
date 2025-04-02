@@ -1,13 +1,12 @@
 import ProjectCard from "@/component/ProjectCard";
 const stack = [
-  "Next.js",
+  "Next.js + App Router",
   "TypeScript",
   "JavaScript",
   "Mantine UI",
   "Tanstack Query",
   "Zustand",
   "Nuqs",
-  "Next.js App Router(Mock REST API)",
   "Playwright",
   "Vercel",
   "Stripe.js",
