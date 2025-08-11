@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/carousel": "^7.17.1",
-    "@mantine/core": "^7.17.1",
-    "@mantine/hooks": "^7.17.1",
-    "@mantine/modals": "^7.17.1",
-    "@mantine/notifications": "^7.17.1",
+    "@mantine/carousel": "^8.2.4",
+    "@mantine/core": "^8.2.4",
+    "@mantine/hooks": "^8.2.4",
+    "@mantine/modals": "^8.2.4",
+    "@mantine/notifications": "^8.2.4",
     "@tabler/icons-react": "^3.31.0",
     "@tanstack/react-query": "^5.67.1",
     "embla-carousel-autoplay": "^7.1.0",

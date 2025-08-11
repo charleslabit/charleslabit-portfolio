@@ -119,11 +119,13 @@ export const Megaworld = () => {
         </Paper>
         <Carousel
           withIndicators
-          loop
           plugins={[autoplay.current]}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          dragFree
+          emblaOptions={{
+            loop: true,
+            dragFree: true,
+          }}
           nextControlIcon={
             <IconCircleChevronRightFilled aria-label="Next Carousel" />
           }

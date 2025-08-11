@@ -122,11 +122,9 @@ export const Exsight = () => {
 
         <Carousel
           withIndicators
-          loop
           plugins={[autoplay.current]}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          dragFree
           controlSize={40}
           nextControlIcon={
             <IconCircleChevronRightFilled aria-label="Next Carousel" />
@@ -134,6 +132,10 @@ export const Exsight = () => {
           previousControlIcon={
             <IconCircleChevronLeftFilled aria-label="Previous Carousel" />
           }
+          emblaOptions={{
+            loop: true,
+            dragFree: true,
+          }}
         >
           {exsightImages.map((src, index) => (
             <Carousel.Slide key={index}>
