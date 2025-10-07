@@ -1,7 +1,6 @@
 import { ThemeSettings } from "@/component";
 import { ActionIcon, Group } from "@mantine/core";
 import {
-  IconBrandFacebookFilled,
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,
   IconFileCv,
@@ -38,7 +37,7 @@ export const Footer = () => {
       >
         <IconBrandLinkedinFilled />
       </ActionIcon>
-      <ActionIcon
+      {/* <ActionIcon
         variant="transparent"
         component="a"
         href="https://www.facebook.com/charleskieeeee"
@@ -46,7 +45,7 @@ export const Footer = () => {
         aria-label="Visit Charles Kenneth Labit's Facebook profile"
       >
         <IconBrandFacebookFilled />
-      </ActionIcon>
+      </ActionIcon> */}
     </Group>
   );
 };

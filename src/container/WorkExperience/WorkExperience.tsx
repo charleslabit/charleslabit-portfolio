@@ -4,17 +4,43 @@ import { IconBriefcase } from "@tabler/icons-react";
 
 const experienceData = [
   {
-    role: "Front-End Developer | Awesomelab Inc.",
-    period: "July 5, 2021 – March 31, 2025",
+    role: "Front-End Developer | SNSoft Technology Inc.",
+    period: "June 2025 – Oct 2025 | Onsite · Philippines ",
     details: [
-      "Developed and maintained web apps for sectors like hotel management, data collection, CMS, and HR, using Next.js, TypeScript, and Mantine UI.",
-      "Converted Figma designs into responsive, accessible, and cross-browser compatible user interfaces.",
-      "Worked with back-end developers to integrate APIs, optimize data flow, and improve performance.",
-      "Managed Git repositories, streamlined CI/CD pipelines, and tracked project progress using Bitbucket and Jira.",
-      "Enhanced UI performance by streamlining data fetching with TanStack Query and reducing boilerplate. Integrated GraphQL using Apollo Client and AWS Amplify.",
-      "Migrated from Ant Design to Mantine UI, improving speed and flexibility.",
-      "Participated in code reviews to maintain standards, reduce errors, and encourage collaboration.",
-      "Used Playwright for end-to-end testing, improving reliability and test coverage.",
+      "Maintained and developed interactive H5, web, and landing pages using React.js, TypeScript, HTML, CSS and Tailwind CSS.",
+      "Translated Figma designs into responsive, accessible, and cross-browser compatible UI components.",
+      "Integrated REST APIs and real-time WebSocket communication using gRPC.",
+      "Assisted in resolving issues from the bug list in a React Native project.",
+      "Applied MVVM architecture principles for structured and maintainable front-end development.",
+      "Contributed to a monorepo environment and collaborated with the Malaysia-based team using Git fork and upstream workflows to ensure consistent and aligned codebase management.",
+    ],
+    skills: [
+      "React.js",
+      "React Native",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "Redux",
+      "REST API",
+      "Websocket",
+      "Grpc",
+      "Github",
+      "Jira",
+      "Lark",
+    ],
+  },
+  {
+    role: "Front-End Developer | Awesomelab Inc.",
+    period: "July 2021 – March 2025 | Remote· Philippines ",
+    details: [
+      "Developed and maintained web applications for hotel management, CMS, HR, and data collection using Next.js, React.js, HTML, CSS, TypeScript, and Mantine UI.",
+      "Translated Figma designs into responsive, accessible, and cross-browser compatible UI components.",
+      "Integrated and consumed RESTful and GraphQL APIs to manage data flow.",
+      "Collaborated on CI/CD and deployment workflows using Bitbucket and AWS CloudFront.",
+      "Enhanced UI performance and maintainability by refactoring legacy code, optimizing data fetching with TanStack Query, reducing re-renders, and implementing Playwright for end-to-end testing. ",
+      "Applied component-based, feature-based, and custom hook architecture patterns to ensure scalability, reusability, and clean code structure across projects. ",
     ],
     skills: [
       "Next.js",
@@ -42,10 +68,10 @@ const experienceData = [
   },
   {
     role: "Junior Programmer | HRD Singapore Pte. Ltd.",
-    period: "June 21, 2018 – June 21, 2021",
+    period: "June 2018 – June 2021 | Onsite · Philippines",
     details: [
-      "Developed and maintained an in-house system for house planners, including desktop and web apps for inventory, data extraction, content management, and automation, improving efficiency and streamlining operations.",
-      "Converted Magic XPA desktop application into Web Application using Vue.js, Ant Design, Node.js, Express.js, RESTful APIs, and MySQL.",
+      "Developed and maintained an internal system for house planners, streamlining operations across inventory, automation, and data extraction. ",
+      "Migrated a legacy Magic XPA desktop app into a Vue.js-based web application using Ant Design, Node.js, Express.js, REST APIs, and MySQL",
     ],
     skills: [
       "Magic XPA",

@@ -69,10 +69,19 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     },
 
     Badge: {
+      defaultProps: {
+        classNames: { root: "hover-badge" },
+      },
       styles: () => ({
         root: {
           textTransform: "none",
           padding: 14,
+          transition:
+            "transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease",
+          "&:hover": {
+            transform: "translateY(-2px) scale(1.03)",
+            backgroundColor: "rgba(99, 102, 241, 0.08)",
+          },
         },
       }),
     },

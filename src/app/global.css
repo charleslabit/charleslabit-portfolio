@@ -2,12 +2,51 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
+/* Chrome, Edge, Safari (WebKit browsers) */
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button {
+  display: none !important;
+}
+
+/* Firefox (uses different control UI, minimal customization possible) */
+video::-moz-volume-control {
+  display: none !important;
+}
 
 .hover-effect {
   transition: all 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
+  }
+}
+
+/* Skills hover effects */
+.hover-card {
+  transition: transform 160ms ease, box-shadow 160ms ease,
+    border-color 160ms ease;
+  will-change: transform;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: rgba(99, 102, 241, 0.35); /* subtle indigo tint */
+}
+
+.hover-badge {
+  transition: transform 140ms ease, background-color 140ms ease;
+}
+
+.hover-badge:hover {
+  transform: translateY(-2px) scale(1.03);
+  background-color: rgba(99, 102, 241, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-card,
+  .hover-badge {
+    transition: none;
   }
 }
 

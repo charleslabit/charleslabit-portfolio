@@ -18,6 +18,7 @@
     "@tanstack/react-query": "^5.67.1",
     "embla-carousel-autoplay": "^7.1.0",
     "embla-carousel-react": "^7.1.0",
+    "framer-motion": "^12.23.22",
     "jotai": "^2.12.1",
     "next": "15.2.1",
     "nuqs": "^2.4.0",

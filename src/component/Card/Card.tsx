@@ -31,7 +31,7 @@ export const Card = ({
   return (
     <MCard
       ref={ref}
-      w={isMobile ? "auto" : 1300}
+      w={isMobile ? "100%" : 1300}
       withBorder={withBorder}
       id={id}
       bg="transparent"
