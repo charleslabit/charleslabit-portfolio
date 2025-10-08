@@ -54,8 +54,15 @@ const skillCategories: Category = {
     "CSS",
     "i18n",
     "React Hook Form",
+    "React Native",
   ],
-  "State & Data Handling": ["Zustand", "Jotai", "TanStack Query", "Nuqs"],
+  "State & Data Handling": [
+    "Zustand",
+    "Jotai",
+    "TanStack Query",
+    "Nuqs",
+    "Redux",
+  ],
   "API Integration": [
     "REST API",
     "Apollo Client (GraphQL)",
