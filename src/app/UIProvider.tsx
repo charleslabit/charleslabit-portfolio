@@ -2,8 +2,9 @@
 import {
   Button,
   ColorSchemeScript,
-  MantineProvider,
   createTheme,
+  MantineProvider,
+  MantineTheme,
 } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import { Notifications } from "@mantine/notifications";
@@ -25,7 +26,7 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
       defaultProps: {
         radius: "md",
       },
-      styles: (theme) => {
+      styles: (theme: MantineTheme) => {
         const colorScheme =
           document.documentElement.getAttribute("data-mantine-color-scheme") ||
           localStorage.getItem("mantine-color-scheme-value");
@@ -72,18 +73,27 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
       defaultProps: {
         classNames: { root: "hover-badge" },
       },
-      styles: () => ({
-        root: {
-          textTransform: "none",
-          padding: 14,
-          transition:
-            "transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease",
-          "&:hover": {
-            transform: "translateY(-2px) scale(1.03)",
-            backgroundColor: "rgba(99, 102, 241, 0.08)",
+      styles: (theme: MantineTheme) => {
+        const colorScheme =
+          document.documentElement.getAttribute("data-mantine-color-scheme") ||
+          localStorage.getItem("mantine-color-scheme-value");
+
+        const isDarkMode = colorScheme === "dark";
+
+        return {
+          root: {
+            textTransform: "none",
+            padding: 14,
+            transition:
+              "transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease",
+            color: isDarkMode ? theme.white : undefined, // White text in dark mode
+            "&:hover": {
+              transform: "translateY(-2px) scale(1.03)",
+              backgroundColor: "rgba(99, 102, 241, 0.08)",
+            },
           },
-        },
-      }),
+        };
+      },
     },
   };
 

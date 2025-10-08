@@ -25,7 +25,7 @@ const experienceData = [
       "Redux",
       "REST API",
       "Websocket",
-      "Grpc",
+      "gRPC",
       "Github",
       "Jira",
       "Lark",

@@ -8,7 +8,9 @@ export const Projects = () => {
   return (
     <>
       <Stack align="center" mt={100}>
-        <Text fw="bold">Some of My Work Projects</Text>
+        <Text fw="bold" id="projects">
+          Some of My Work Projects
+        </Text>
         <Stack align="center" gap={100}>
           <Megaworld />
           <Exsight />
@@ -16,9 +18,7 @@ export const Projects = () => {
         </Stack>
       </Stack>
       <Stack align="center">
-        <Text fw="bold" id="projects">
-          Personal Projects
-        </Text>
+        <Text fw="bold">Personal Projects</Text>
         <PersonalProject />
       </Stack>
     </>

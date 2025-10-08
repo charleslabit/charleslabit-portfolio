@@ -80,8 +80,8 @@ const skillCategories: Category = {
 
 export const SkillsPage = () => {
   return (
-    <Center>
-      <Card id="skills" title="Technologies I’ve Worked With">
+    <Center id="skills">
+      <Card title="Technologies I’ve Worked With">
         <Container size="lg">
           <Text c="dimmed" mb="md">
             A collection of technologies and tools I’ve worked with across
@@ -117,7 +117,7 @@ export const SkillsPage = () => {
                         <Badge
                           key={skill}
                           variant="light"
-                          size="sm"
+                          size="lg"
                           className="hover-badge"
                         >
                           {skill}

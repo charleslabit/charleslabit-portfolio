@@ -22,7 +22,7 @@ export const CKMart = () => {
       image={"/default/e-commerce-products.png"}
       techStack={stack}
       liveDemo="https://ecommerce-demo-orpin.vercel.app/"
-      overlayDescription="A full-stack e-commerce demo powered by Next.js, Supabase, and PostgreSQL. Currently, product, category and inventory management are implemented, with further enhancements in progress. Stripe.js is integrated for payments. More features coming soon!"
+      overlayDescription="A full-stack e-commerce demo powered by Next.js, Supabase, and PostgreSQL. Currently, product, category and inventory management are implemented, with further enhancements in progress. Stripe.js is integrated for payments. "
     />
   );
 };
