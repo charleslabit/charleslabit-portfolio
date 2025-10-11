@@ -1,21 +1,6 @@
-import { Card } from "@/component";
-import { Carousel } from "@mantine/carousel";
-import {
-  AspectRatio,
-  Badge,
-  Group,
-  List,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@mantine/core";
-import {
-  IconCircleChevronLeftFilled,
-  IconCircleChevronRightFilled,
-} from "@tabler/icons-react";
-import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
-import { useRef } from "react";
+import { Card, ImagePreview } from "@/component";
+import { Badge, Group, Paper, SimpleGrid, Stack, Text } from "@mantine/core";
+import Link from "next/link";
 const exsightFeatures = [
   {
     title: "Drag-and-Drop Builder",
@@ -83,77 +68,71 @@ const skills = [
   "Playwright",
 ];
 
+const techStack = {
+  Frontend: ["React.js", "Next.js", "TypeScript", "JavaScript", "Mantine UI"],
+  "State Management": ["Zustand", "Jotai", "TanStack Query", "Nuqs"],
+  Forms: ["React Hook Form"],
+  "Interactions & UI": ["Dnd Kit"],
+  "Backend & APIs": [
+    "REST API Integration",
+    "GraphQL API & Subscriptions",
+    "Apollo GraphQL",
+  ],
+  "Cloud & Auth": ["AWS Amplify API (GraphQL)", "AWS Cognito Auth"],
+  Testing: ["Playwright"],
+};
+
 export const Exsight = () => {
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
-
-  const handleMouseEnter = () => autoplay.current?.stop(); // Stop autoplay on hover
-  const handleMouseLeave = () => autoplay.current?.play(); // Restart autoplay when hover ends
   return (
-    <Card id="Exsight">
-      <SimpleGrid cols={{ lg: 2, md: 1 }} spacing={50}>
+    <Card id="Exsight" withBorder>
+      <Paper m="auto">
         <Stack>
-          <Stack gap={0}>
-            <Text fw="bold" fz={20}>
-              Survey Builder & Data Collection Tool
-            </Text>
-            <Text c="dimmed" fz={16}>
-              Developed a powerful survey-building platform designed to
-              streamline data collection and enhance user experience.
-            </Text>
-          </Stack>
-          <Text fz={16}>Key Features:</Text>
-          <List>
-            {exsightFeatures?.map(({ title, description }) => {
-              return (
-                <List.Item key={title}>
-                  <strong>{title}</strong> – {description}
-                </List.Item>
-              );
-            })}
-          </List>
-          <Group>
-            {skills.map((skill) => (
-              <Badge key={skill} variant="light">
-                {skill}
-              </Badge>
-            ))}
-          </Group>
-        </Stack>
+          <SimpleGrid cols={{ sm: 1, md: 2 }}>
+            <Stack gap={0}>
+              <Group justify="space-between">
+                <Link href="https://flexiformph.com/" target="_blank">
+                  <Text fw="bold" fz={20} c="blue" td="underline">
+                    Exsight — Survey Builder Platform (Enhanced Flexiform
+                    Version)
+                  </Text>
+                </Link>
+              </Group>
+              <Text c="dimmed" fz={16}>
+                A powerful, user-friendly platform for creating and managing
+                surveys with ease. Features include a drag-and-drop builder,
+                customizable elements, conditional logic, structured data
+                management, and exportable reports — all secured with role-based
+                access and auto-save functionality.
+              </Text>
+              <Stack gap="sm" mt={10}>
+                <Text fw="bold" fz={16}>
+                  Tech Stack
+                </Text>
+                {Object.entries(techStack).map(([category, skills]) => (
+                  <Stack key={category} gap="xs">
+                    <Text fw={500} fz={14} c="dimmed">
+                      {category}
+                    </Text>
+                    <Group gap="xs">
+                      {skills.map((skill) => (
+                        <Badge key={skill} variant="light">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </Group>
+                  </Stack>
+                ))}
+              </Stack>
+            </Stack>
 
-        <Carousel
-          withIndicators
-          plugins={[autoplay.current]}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          controlSize={40}
-          nextControlIcon={
-            <IconCircleChevronRightFilled aria-label="Next Carousel" />
-          }
-          previousControlIcon={
-            <IconCircleChevronLeftFilled aria-label="Previous Carousel" />
-          }
-          emblaOptions={{
-            loop: true,
-            dragFree: true,
-          }}
-        >
-          {exsightImages.map((src, index) => (
-            <Carousel.Slide key={index}>
-              <AspectRatio ratio={16 / 9} h={500} pos="relative">
-                <Image
-                  alt={`Attachment-${index}`}
-                  src={src}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
-                  style={{
-                    objectFit: "contain",
-                  }}
-                />
-              </AspectRatio>
-            </Carousel.Slide>
-          ))}
-        </Carousel>
-      </SimpleGrid>
+            <SimpleGrid cols={1}>
+              {exsightImages?.map((src) => {
+                return <ImagePreview key={src} title="Megaworld" src={src} />;
+              })}
+            </SimpleGrid>
+          </SimpleGrid>
+        </Stack>
+      </Paper>
     </Card>
   );
 };

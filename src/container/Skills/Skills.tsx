@@ -88,7 +88,7 @@ const skillCategories: Category = {
 export const SkillsPage = () => {
   return (
     <Center id="skills">
-      <Card title="Technologies I’ve Worked With">
+      <Card title="Technologies I’ve Worked With" animation="fade-in">
         <Container size="lg">
           <Text c="dimmed" mb="md">
             A collection of technologies and tools I’ve worked with across

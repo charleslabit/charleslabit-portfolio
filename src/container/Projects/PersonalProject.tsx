@@ -11,10 +11,10 @@ export const PersonalProject = () => {
     <Card>
       <SimpleGrid cols={{ lg: 2, md: 1 }} spacing={50}>
         <CKMart />
+        <DoctorsNote />
         <ChatApp />
         <Nyetflix />
         <TodoMySQL />
-        <DoctorsNote />
       </SimpleGrid>
     </Card>
   );

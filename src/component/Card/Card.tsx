@@ -7,7 +7,7 @@ export const Card = ({
   children,
   id,
   title,
-  animation = "fade-in",
+  animation,
   withBorder = false,
 }: {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ export const Card = ({
   const [hasAnimated, setHasAnimated] = useState(false);
   const { ref, entry } = useIntersection({
     root: null, // Uses viewport as the root
-    threshold: 0.2,
+    threshold: 0.1,
   });
   useEffect(() => {
     if (entry?.isIntersecting && !hasAnimated) {

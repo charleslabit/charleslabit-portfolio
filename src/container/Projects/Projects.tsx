@@ -1,8 +1,9 @@
 import { Stack, Text } from "@mantine/core";
+import { Advertisement } from "./Advertisement";
 import { Exsight } from "./Exsight";
-import { LandingPages } from "./LandingPages";
 import { Megaworld } from "./Megaworld";
 import { PersonalProject } from "./PersonalProject";
+import { SharpKernel } from "./SharpKernel";
 
 export const Projects = () => {
   return (
@@ -14,7 +15,8 @@ export const Projects = () => {
         <Stack align="center" gap={100}>
           <Megaworld />
           <Exsight />
-          <LandingPages />
+          <SharpKernel />
+          <Advertisement />
         </Stack>
       </Stack>
       <Stack align="center">

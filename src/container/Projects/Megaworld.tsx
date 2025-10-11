@@ -1,22 +1,6 @@
-import { Card } from "@/component";
-import { Carousel } from "@mantine/carousel";
-import {
-  AspectRatio,
-  Badge,
-  Group,
-  List,
-  Paper,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@mantine/core";
-import {
-  IconCircleChevronLeftFilled,
-  IconCircleChevronRightFilled,
-} from "@tabler/icons-react";
-import Autoplay from "embla-carousel-autoplay";
-import Image from "next/image";
-import { useRef } from "react";
+import { Card, ImagePreview } from "@/component";
+import { Badge, Group, Paper, SimpleGrid, Stack, Text } from "@mantine/core";
+import Link from "next/link";
 
 const megaworldFeatures = [
   {
@@ -63,93 +47,73 @@ const megaworldImages = [
   "/default/mega4.png",
 ];
 
-const skills = [
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Mantine UI",
-  "Zustand",
-  "Jotai",
-  "REST API Integration",
-  "GraphQL API & Subscriptions",
-  "AWS Amplify API (GraphQL)",
-  "Apollo GraphQL",
-  "Tanstack Query",
-  "AWS Cognito Auth",
-];
+const techStack = {
+  Frontend: ["React.js", "Next.js", "TypeScript", "JavaScript", "Mantine UI"],
+  "State Management": ["Zustand", "Jotai", "TanStack Query", "Nuqs"],
+  Forms: ["React Hook Form"],
+  "Interactions & UI": ["Dnd Kit"],
+  "Backend & APIs": [
+    "REST API Integration",
+    "GraphQL API & Subscriptions",
+    "Apollo GraphQL",
+  ],
+  "Cloud & Auth": ["AWS Amplify API (GraphQL)", "AWS Cognito Auth"],
+  Testing: ["Playwright"],
+};
 
 export const Megaworld = () => {
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
-
-  const handleMouseEnter = () => autoplay.current?.stop(); // Stop autoplay on hover
-  const handleMouseLeave = () => autoplay.current?.play(); // Restart autoplay when hover ends
   return (
-    <Card>
-      <SimpleGrid cols={{ lg: 2, md: 1 }} spacing={50}>
-        <Paper m="auto">
-          <Stack>
+    <Card withBorder>
+      <Paper m="auto">
+        <Stack>
+          <SimpleGrid cols={{ sm: 1, md: 2 }}>
             <Stack gap={0}>
-              <Text fw="bold" fz={20}>
-                Comprehensive Property and Booking Management System
-              </Text>
+              <Group justify="space-between">
+                <Link
+                  href="https://investorrelations.megaworldhotels.com/"
+                  target="_blank"
+                >
+                  <Text fw="bold" fz={20} c="blue" td="underline">
+                    Investor Relations Megaworld
+                  </Text>
+                </Link>
+              </Group>
               <Text c="dimmed" fz={16}>
-                Developed a robust web application designed to streamline
-                property management operations.
+                A comprehensive property and booking management system built to
+                streamline operations for real estate and hospitality
+                businesses. It includes modules for reservations, content
+                management, messaging, revenue tracking, and approval workflows
+                — all secured with role-based access.
               </Text>
+              <Stack gap="sm" mt={10}>
+                <Text fw="bold" fz={16}>
+                  Tech Stack
+                </Text>
+                {Object.entries(techStack).map(([category, skills]) => (
+                  <Stack key={category} gap="xs">
+                    <Text fw={500} fz={14} c="dimmed">
+                      {category}
+                    </Text>
+                    <Group gap="xs">
+                      {skills.map((skill) => (
+                        <Badge key={skill} variant="light">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </Group>
+                  </Stack>
+                ))}
+              </Stack>
             </Stack>
-            <Text fz={16}>Key Features:</Text>
-            <List>
-              {megaworldFeatures?.map(({ title, description }) => {
-                return (
-                  <List.Item key={title}>
-                    <strong>{title}</strong> – {description}
-                  </List.Item>
-                );
-              })}
-            </List>
 
-            <Group>
-              {skills.map((skill) => (
-                <Badge key={skill} variant="light">
-                  {skill}
-                </Badge>
-              ))}
-            </Group>
-          </Stack>
-        </Paper>
-        <Carousel
-          withIndicators
-          plugins={[autoplay.current]}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          emblaOptions={{
-            loop: true,
-            dragFree: true,
-          }}
-          nextControlIcon={
-            <IconCircleChevronRightFilled aria-label="Next Carousel" />
-          }
-          previousControlIcon={
-            <IconCircleChevronLeftFilled aria-label="Previous Carousel" />
-          }
-        >
-          {megaworldImages.map((src, index) => (
-            <Carousel.Slide key={index}>
-              <AspectRatio ratio={16 / 9} h={520} pos="relative">
-                <Image
-                  alt={`Attachment-${index}`}
-                  src={src}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
-                  style={{
-                    objectFit: "contain",
-                  }}
-                />
-              </AspectRatio>
-            </Carousel.Slide>
-          ))}
-        </Carousel>
-      </SimpleGrid>
+            <SimpleGrid cols={{ sm: 1, md: 2 }}>
+              {megaworldImages?.map((src) => {
+                return <ImagePreview key={src} title="Megaworld" src={src} />;
+              })}
+            </SimpleGrid>
+          </SimpleGrid>
+        </Stack>
+      </Paper>
     </Card>
   );
 };

@@ -10,7 +10,6 @@ import {
 import Image from "next/image";
 
 const landingPagesVideos = [
-  "/default/sharp-kernel.mp4",
   "/default/dragon-tiger.mp4",
   "/default/color-game-h5.mp4",
   "/default/color-game-web.png",
@@ -18,20 +17,20 @@ const landingPagesVideos = [
 
 const videoExtensions = [".mp4", ".webm", ".ogg"];
 
-export const LandingPages = () => {
+export const Advertisement = () => {
   return (
     <Card>
       <Paper m="auto">
         <Stack>
           <Stack gap={0}>
             <Text fw="bold" fz={20}>
-              Modern Landing Page & Advertisement Platform
+              Responsive H5 & Web Advertisement Platform
             </Text>
             <Text c="dimmed" fz={16}>
-              Created an engaging and responsive landing page designed to
-              promote products and services effectively. Focused on
-              conversion-driven UI and modern animations to enhance user
-              interaction.
+              Developed a modern, mobile-first landing page to promote products
+              and services across devices. Emphasized smooth DOM interactions,
+              responsive layout, and translation support for a wider audience
+              reach.
             </Text>
           </Stack>
 
