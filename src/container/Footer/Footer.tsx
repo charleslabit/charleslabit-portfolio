@@ -48,9 +48,7 @@ export const Footer = () => {
         <IconBrandFacebookFilled />
       </ActionIcon> */}
       </Group>
-      <Text fz="xs">
-        © 2025 Charles Kenneth Labit | Built with Next.js & Mantine UI
-      </Text>
+      <Text fz="xs">© {new Date().getFullYear()} Charles Labit</Text>
     </Group>
   );
 };
