@@ -83,7 +83,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo.svg" />
+        {/* <link rel="icon" href="/logo.svg" /> */}
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/logo-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/logo-512x512.png"
+        />
         {/* <ColorSchemeScript /> */}
       </head>
       <body
