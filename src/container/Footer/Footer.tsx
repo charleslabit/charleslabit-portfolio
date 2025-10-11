@@ -8,7 +8,7 @@ import {
 
 export const Footer = () => {
   return (
-    <Group justify="space-between">
+    <Group justify="space-between" maw={1440} m="auto">
       <Group>
         <ThemeSettings />
         <ActionIcon
