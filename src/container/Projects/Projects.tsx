@@ -8,11 +8,11 @@ import { SharpKernel } from "./SharpKernel";
 export const Projects = () => {
   return (
     <>
-      <Stack align="center" mt={100}>
+      <Stack align="center">
         <Text fw="bold" id="projects">
           Some of My Work Projects
         </Text>
-        <Stack align="center" gap={100}>
+        <Stack align="center" gap={10}>
           <Megaworld />
           <Exsight />
           <SharpKernel />

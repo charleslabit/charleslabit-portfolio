@@ -13,7 +13,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Main */}
       <AppShell.Main>
-        <Stack gap={100} mb={100} mt={70}>
+        <Stack gap={25} mb={100} mt={70}>
           {children}
         </Stack>
       </AppShell.Main>
