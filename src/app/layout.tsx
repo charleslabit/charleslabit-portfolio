@@ -73,6 +73,13 @@ export const metadata: Metadata = {
     index: true, // Allow search engines to index
     follow: true, // Allow following links
   },
+
+  icons: {
+    icon: [
+      { url: "/logo-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/logo-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -84,18 +91,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* <link rel="icon" href="/logo.svg" /> */}
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/logo-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="512x512"
-          href="/logo-512x512.png"
-        />
         {/* <ColorSchemeScript /> */}
       </head>
       <body
