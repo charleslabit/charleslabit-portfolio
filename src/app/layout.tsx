@@ -89,10 +89,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* <link rel="icon" href="/logo.svg" /> */}
-        {/* <ColorSchemeScript /> */}
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning
