@@ -1,7 +1,7 @@
 import { SECTIONS } from "@/constants";
 import { useEffect, useRef, useState } from "react";
 
-export default function useActiveSection() {
+export const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState("home");
   const manualOverride = useRef(false);
   const debounceTimer = useRef<NodeJS.Timeout | null>(null);
@@ -65,4 +65,4 @@ export default function useActiveSection() {
   };
 
   return { activeSection, setActiveSectionManually };
-}
+};

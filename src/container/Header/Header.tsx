@@ -1,5 +1,5 @@
 import { SECTIONS } from "@/constants";
-import useActiveSection from "@/hooks/useActiveSection";
+import { useActiveSection } from "@/hooks/";
 import { Burger, Button, Center, Drawer, Group, Stack } from "@mantine/core";
 import { useState } from "react";
 
