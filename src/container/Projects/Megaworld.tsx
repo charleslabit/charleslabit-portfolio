@@ -63,7 +63,7 @@ const techStack = {
 
 export const Megaworld = () => {
   return (
-    <Card withBorder>
+    <Card withBorder animation="slide-in-right">
       <Paper m="auto">
         <Stack>
           <SimpleGrid cols={{ sm: 1, md: 2 }}>

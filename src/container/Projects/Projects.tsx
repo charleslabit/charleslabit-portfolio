@@ -12,7 +12,7 @@ export const Projects = () => {
         <Text fw="bold" id="projects">
           Some of My Work Projects
         </Text>
-        <Stack align="center" gap={10}>
+        <Stack align="center" gap={25}>
           <Megaworld />
           <Exsight />
           <SharpKernel />

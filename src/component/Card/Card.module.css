@@ -1,4 +1,47 @@
+/* Hidden state: only opacity */
 .card-hidden {
   opacity: 0;
-  transform: translateY(20px); /* Slight lift effect */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Fade in */
+.fade-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Slide in left */
+.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card-hidden.slide-in-left {
+  transform: translateX(-40px);
+}
+
+/* Slide in right */
+.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card-hidden.slide-in-right {
+  transform: translateX(40px);
+}
+
+/* Fade in upward */
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-hidden.fade-in-up {
+  transform: translateY(40px);
+}
+
+/* Zoom in */
+.zoom-in {
+  opacity: 1;
+  transform: scale(1);
+}
+.card-hidden.zoom-in {
+  transform: scale(0.9);
 }

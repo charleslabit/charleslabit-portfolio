@@ -18,7 +18,7 @@ export const HomePage = () => {
   }, []);
   return (
     <Center h={"calc(100vh - 130px)"}>
-      <Card id="home">
+      <Card id="home" animation="fade-in">
         <Text fw="bold" fz={{ base: 32, sm: 40, md: 48, lg: 54 }}>
           {displayedText}
         </Text>

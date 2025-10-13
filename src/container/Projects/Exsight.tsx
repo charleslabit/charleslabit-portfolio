@@ -67,7 +67,7 @@ const techStack = {
 
 export const Exsight = () => {
   return (
-    <Card id="Exsight" withBorder>
+    <Card id="Exsight" withBorder animation="slide-in-left">
       <Paper m="auto">
         <Stack>
           <SimpleGrid cols={{ sm: 1, md: 2 }}>

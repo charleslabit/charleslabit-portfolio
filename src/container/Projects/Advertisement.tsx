@@ -19,7 +19,7 @@ const videoExtensions = [".mp4", ".webm", ".ogg"];
 
 export const Advertisement = () => {
   return (
-    <Card>
+    <Card withBorder animation="slide-in-left">
       <Paper m="auto">
         <Stack>
           <Stack gap={0}>

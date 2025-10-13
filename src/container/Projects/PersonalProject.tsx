@@ -8,7 +8,7 @@ import { TodoMySQL } from "./TodoMySQL";
 
 export const PersonalProject = () => {
   return (
-    <Card>
+    <Card animation="fade-in-up">
       <SimpleGrid cols={{ lg: 2, md: 1 }} spacing={50}>
         <CKMart />
         <DoctorsNote />
