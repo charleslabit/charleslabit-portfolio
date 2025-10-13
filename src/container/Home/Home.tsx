@@ -1,4 +1,5 @@
 import { Card } from "@/component/";
+import { getYearsOfExperience } from "@/util/";
 import { Center, Text } from "@mantine/core";
 import { useEffect, useState } from "react";
 
@@ -23,9 +24,10 @@ export const HomePage = () => {
           {displayedText}
         </Text>
         <Text fz={{ base: 20, sm: 24, md: 32, lg: 40 }}>
-          A Front End Developer specializing in building responsive and
-          user-friendly web applications. I focus on creating seamless and
-          interactive experiences using modern web technologies.
+          I'm a Front-End Developer with {getYearsOfExperience()} years of
+          experience, specializing in building responsive and user-friendly web
+          applications. I focus on creating seamless and interactive experiences
+          using modern web technologies.
         </Text>
       </Card>
     </Center>

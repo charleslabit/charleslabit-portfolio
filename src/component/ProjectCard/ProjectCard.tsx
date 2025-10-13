@@ -24,7 +24,7 @@ interface ProjectCardProps {
   overlayDescription: string;
 }
 
-export default function ProjectCard({
+export const ProjectCard = ({
   title,
   description,
   image,
@@ -33,7 +33,7 @@ export default function ProjectCard({
   github,
   referenceSite,
   overlayDescription,
-}: ProjectCardProps) {
+}: ProjectCardProps) => {
   const [hover, setHover] = useState(false);
 
   return (
@@ -124,4 +124,4 @@ export default function ProjectCard({
       </Card>
     </>
   );
-}
+};

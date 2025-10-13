@@ -1,16 +1,8 @@
-import ProjectCard from "@/component/ProjectCard";
-const stack = [
-  "Supabase",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Mantine UI",
-  "Tanstack Query",
-  "Jotai",
-  "Vercel",
-];
+import { ProjectCard } from "@/component";
+import { useChatAppViewModel } from "./ChatAppViewModel";
 
 export const ChatApp = () => {
+  const { stack } = useChatAppViewModel();
   return (
     <ProjectCard
       title="SupaChat - Real-Time Chat App with Supabase"

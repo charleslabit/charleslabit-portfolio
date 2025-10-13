@@ -1,1 +1,1 @@
-export * from "./WorkExperience";
+export * from "./WorkExperienceView";

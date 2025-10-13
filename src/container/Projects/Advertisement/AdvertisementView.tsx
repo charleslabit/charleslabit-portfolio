@@ -8,16 +8,10 @@ import {
   Text,
 } from "@mantine/core";
 import Image from "next/image";
-
-const landingPagesVideos = [
-  "/default/dragon-tiger.mp4",
-  "/default/color-game-h5.mp4",
-  "/default/color-game-web.png",
-];
-
-const videoExtensions = [".mp4", ".webm", ".ogg"];
+import { useAdvertisementViewModel } from "./AdvertisementViewModel";
 
 export const Advertisement = () => {
+  const { landingPages, videoExtensions } = useAdvertisementViewModel();
   return (
     <Card withBorder animation="slide-in-left">
       <Paper m="auto">
@@ -67,7 +61,7 @@ export const Advertisement = () => {
       </Paper>
 
       <SimpleGrid cols={{ sm: 2, xs: 1 }} spacing="md" mt={30}>
-        {landingPagesVideos?.map((src, i) => {
+        {landingPages?.map((src, i) => {
           const isVideo = videoExtensions.some((ext) =>
             src.toLowerCase().endsWith(ext)
           );

@@ -1,8 +1,8 @@
-import ProjectCard from "@/component/ProjectCard";
-
-const stack = ["Next.js", "TypeScript", "Javscript", "Mantine UI", "Vercel"];
+import { ProjectCard } from "@/component/";
+import { useDoctorsNoteViewModel } from "./DoctorsNoteViewModel";
 
 export const DoctorsNote = () => {
+  const { stack } = useDoctorsNoteViewModel();
   return (
     <ProjectCard
       title="My Doctor's Note Clone - Assessment Exam"

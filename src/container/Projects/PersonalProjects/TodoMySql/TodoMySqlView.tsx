@@ -1,20 +1,8 @@
-import ProjectCard from "@/component/ProjectCard";
-const stack = [
-  "Node.js",
-  "Express",
-  "MySQL",
-  "Axios",
-  "Railway",
-  "Vercel",
-  "Next.js",
-  "Typescript",
-  "Javascript",
-  "Mantine UI",
-  "TanStack Query",
-  "TablePlus",
-];
+import { ProjectCard } from "@/component/";
+import { useTodoMySqlViewModel } from "./TodoMySqlViewModel";
 
 export const TodoMySQL = () => {
+  const { stack } = useTodoMySqlViewModel();
   return (
     <ProjectCard
       title="Todo MySQL - CRUD API with Next.js & MySQL"

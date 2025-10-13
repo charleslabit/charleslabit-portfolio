@@ -1,20 +1,8 @@
-import ProjectCard from "@/component/ProjectCard";
-const stack = [
-  "Next.js + App Router",
-  "TypeScript",
-  "JavaScript",
-  "Mantine UI",
-  "Tanstack Query",
-  "Zustand",
-  "Nuqs",
-  "Playwright",
-  "Vercel",
-  "Stripe.js",
-  "Supabase",
-  "PostgreSQL",
-];
+import { ProjectCard } from "@/component/";
+import { useCKMartViewModel } from "./CKMartViewModel";
 
 export const CKMart = () => {
+  const { stack } = useCKMartViewModel();
   return (
     <ProjectCard
       title="CK Mart - E-commerce Demo"

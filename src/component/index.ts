@@ -3,4 +3,5 @@ export * from "./FilePreview";
 export * from "./FlipCard";
 export * from "./ImageGrid";
 export * from "./ImagePreview";
+export * from "./ProjectCard";
 export * from "./ThemeSettings";

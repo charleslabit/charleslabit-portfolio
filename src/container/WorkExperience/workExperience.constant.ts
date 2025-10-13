@@ -1,8 +1,4 @@
-import { Card } from "@/component";
-import { Badge, Blockquote, Center, Group, List, Text } from "@mantine/core";
-import { IconBriefcase } from "@tabler/icons-react";
-
-const experienceData = [
+export const EXPERIENCE_LIST = [
   {
     role: "Front-End Developer | SNSoft Technology Inc.",
     period: "June 2025 – Oct 2025 | Onsite · Philippines ",
@@ -88,38 +84,3 @@ const experienceData = [
     ],
   },
 ];
-
-const ExperienceBlock = ({
-  role,
-  period,
-  details,
-  skills,
-}: (typeof experienceData)[0]) => (
-  <Blockquote color="blue" cite={period} mt="xl" icon={<IconBriefcase />}>
-    <Text fw="bold">{role}</Text>
-    <List>
-      {details.map((item, index) => (
-        <List.Item key={index}>{item}</List.Item>
-      ))}
-    </List>
-    <Group mt={20} justify="center">
-      {skills.map((skill) => (
-        <Badge key={skill} variant="light">
-          {skill}
-        </Badge>
-      ))}
-    </Group>
-  </Blockquote>
-);
-
-export const WorkExperience = () => {
-  return (
-    <Center>
-      <Card id="experience" title="Work Experience" animation="slide-in-left">
-        {experienceData.map((exp, index) => (
-          <ExperienceBlock key={index} {...exp} />
-        ))}
-      </Card>
-    </Center>
-  );
-};

@@ -1,15 +1,8 @@
-import ProjectCard from "@/component/ProjectCard";
-const stack = [
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Mantine UI",
-  "Tanstack Query",
-  "REST API",
-  "Vercel",
-];
+import { ProjectCard } from "@/component/";
+import { useNyetflixViewModel } from "./NyetflixViewModel";
 
 export const Nyetflix = () => {
+  const { stack } = useNyetflixViewModel();
   return (
     <ProjectCard
       title="Nyetflix - TMDb Movie Explorer"

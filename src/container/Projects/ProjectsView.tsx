@@ -2,7 +2,7 @@ import { Stack, Text } from "@mantine/core";
 import { Advertisement } from "./Advertisement";
 import { Exsight } from "./Exsight";
 import { Megaworld } from "./Megaworld";
-import { PersonalProject } from "./PersonalProject";
+import { PersonalProjects } from "./PersonalProjects";
 import { SharpKernel } from "./SharpKernel";
 
 export const Projects = () => {
@@ -21,7 +21,7 @@ export const Projects = () => {
       </Stack>
       <Stack align="center">
         <Text fw="bold">Personal Projects</Text>
-        <PersonalProject />
+        <PersonalProjects />
       </Stack>
     </>
   );

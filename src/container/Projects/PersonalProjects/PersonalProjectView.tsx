@@ -4,9 +4,9 @@ import { ChatApp } from "./ChatApp";
 import { CKMart } from "./CKMart";
 import { DoctorsNote } from "./DoctorsNote";
 import { Nyetflix } from "./Nyetflix";
-import { TodoMySQL } from "./TodoMySQL";
+import { TodoMySQL } from "./TodoMySql";
 
-export const PersonalProject = () => {
+export const PersonalProjects = () => {
   return (
     <Card animation="fade-in-up">
       <SimpleGrid cols={{ lg: 2, md: 1 }} spacing={50}>
