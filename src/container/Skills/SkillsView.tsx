@@ -41,7 +41,7 @@ export const SkillsPage = () => {
                   }}
                 >
                   <Stack gap="sm" align="center">
-                    <Group align="center">
+                    <Group align="center" justify="center">
                       {categoryIcons[category]}
                       <Title order={4} ta="center" title={category}>
                         {category}

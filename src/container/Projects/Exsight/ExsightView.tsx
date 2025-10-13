@@ -6,7 +6,7 @@ import { useExsightViewModel } from "./ExsightViewModel";
 export const Exsight = () => {
   const { stack: techStack, images: exsightImages } = useExsightViewModel();
   return (
-    <Card id="Exsight" withBorder animation="slide-in-left">
+    <Card id="Exsight" withBorder animation="fade-in">
       <Paper m="auto">
         <Stack>
           <SimpleGrid cols={{ sm: 1, md: 2 }}>

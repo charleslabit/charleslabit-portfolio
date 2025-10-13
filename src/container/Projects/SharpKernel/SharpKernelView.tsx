@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const SharpKernel = () => {
   return (
-    <Card withBorder animation="slide-in-right">
+    <Card withBorder animation="fade-in">
       <Paper m="auto">
         <Stack gap={0}>
           <Link href="https://sharpkernel.com/" target="_blank">

@@ -13,7 +13,7 @@ import { useAdvertisementViewModel } from "./AdvertisementViewModel";
 export const Advertisement = () => {
   const { landingPages, videoExtensions } = useAdvertisementViewModel();
   return (
-    <Card withBorder animation="slide-in-left">
+    <Card withBorder animation="fade-in">
       <Paper m="auto">
         <Stack>
           <Stack gap={0}>

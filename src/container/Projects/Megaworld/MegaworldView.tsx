@@ -6,7 +6,7 @@ import { useMegaWorldViewModel } from "./MegaWorldViewModel";
 export const Megaworld = () => {
   const { stack: techStack, images: megaworldImages } = useMegaWorldViewModel();
   return (
-    <Card withBorder animation="slide-in-right">
+    <Card withBorder animation="fade-in">
       <Paper m="auto">
         <Stack>
           <SimpleGrid cols={{ sm: 1, md: 2 }}>
