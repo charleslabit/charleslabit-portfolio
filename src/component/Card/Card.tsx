@@ -20,7 +20,7 @@ export const Card = ({
     | "zoom-in";
   withBorder?: boolean;
 }) => {
-  const isMobile = useMediaQuery("(max-width: 1320px)");
+  const isMobile = useMediaQuery("(max-width: 600px)");
   const [hasAnimated, setHasAnimated] = useState(false);
   const [initialX, setInitialX] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -56,7 +56,8 @@ export const Card = ({
   return (
     <MCard
       ref={setRefs}
-      w={isMobile ? "100%" : 1300}
+      w="100%"
+      maw={1300}
       withBorder={withBorder}
       id={id}
       bg="transparent"
