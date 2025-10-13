@@ -1,5 +1,5 @@
 import { Card as MCard, Text } from "@mantine/core";
-import { useIntersection, useMediaQuery } from "@mantine/hooks";
+import { useIntersection } from "@mantine/hooks";
 import { useEffect, useRef, useState } from "react";
 
 export const Card = ({
@@ -20,7 +20,6 @@ export const Card = ({
     | "zoom-in";
   withBorder?: boolean;
 }) => {
-  const isMobile = useMediaQuery("(max-width: 600px)");
   const [hasAnimated, setHasAnimated] = useState(false);
   const [initialX, setInitialX] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
